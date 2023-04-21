@@ -1,1 +1,1 @@
-This is where we commit our changes for the time series
+This is where we commit our changes for the event series
