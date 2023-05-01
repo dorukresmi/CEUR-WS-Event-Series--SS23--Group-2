@@ -5,12 +5,12 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "colocation"
+name = "eventseries"
 authors = [
-  {name = "Maik Ulmer", email = "maik.ulmer@rwth-aachen.de"}
+  {name = "Ayan Banerjee", email = "ayan.banerjee@rwth-aachen.de"}
 ]
 maintainers = [
-  { name = "Maik Ulmer", email = "maik.ulmer@rwth-aachen.de" },
+  { name = "Ayan Banerjee", email = "ayan.banerjee@rwth-aachen.de"},
 ]
 readme = "README.md"
 license= "Apache-2.0"
@@ -37,12 +37,12 @@ classifiers=[
     ]
 dynamic = ["version", "description"]
 [tool.hatch.version]
-path = "colocation/__init__.py"
+path = "eventseries/__init__.py"
 
 [project.urls]
-Home = "https://github.com/MaikUlmer/KGLab-SS2023-Colocation"
-Documentation = "https://github.com/MaikUlmer/KGLab-SS2023-Colocation"
-Source = "https://github.com/MaikUlmer/KGLab-SS2023-Colocation/wiki"
+Home = "https://github.com/Ayan1089/CEUR-WS-Event-Series--SS23"
+Documentation = "https://github.com/Ayan1089/CEUR-WS-Event-Series--SS23"
+Source = "https://github.com/Ayan1089/CEUR-WS-Event-Series--SS23/wiki"
 
 [project.optional-dependencies]
 test = [
@@ -51,5 +51,5 @@ test = [
 
 [tool.hatch.build.targets.wheel]
 packages = [
-  "colocation"
+  "eventseries"
 ]
