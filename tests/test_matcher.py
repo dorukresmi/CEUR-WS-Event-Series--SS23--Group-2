@@ -4,7 +4,9 @@ Created on 2023-05-01
 @author: Ayan
 '''
 import unittest
-from eventseries.matcher import Matcher
+
+from eventseries.src.main.util.matcher import Matcher
+
 
 class TestMatcher(unittest.TestCase):
     """
