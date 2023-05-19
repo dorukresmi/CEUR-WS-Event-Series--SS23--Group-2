@@ -12,6 +12,7 @@ from plp.ordinal import Ordinal
 from util import Utility
 
 from eventseries.src.main.parsers.volumeparser import VolumeParser
+from import2Neo4j import ImportData
 
 if __name__ == '__main__':
 
@@ -47,3 +48,6 @@ if __name__ == '__main__':
     print("Entries for event_series matching with the events based on titles: ", len(matches))
     for match in matches:
         print(match)
+    ## Import data to neo4j
+    import_data = ImportData.ImportData()
+    import_data.fetch_data_and_import()
