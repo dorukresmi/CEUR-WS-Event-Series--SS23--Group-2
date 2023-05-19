@@ -3,17 +3,15 @@ Created on 2023-05-03
 
 @author: Ayan1089
 '''
-import datetime
 import json
 import os
-import requests
-from bs4 import BeautifulSoup
 
 from eventseries.src.main.util.matcher import Matcher
 from query.queriedEvents import Events
-from util import Utility
 from plp.ordinal import Ordinal
-from plp.volumeparser import VolumeParser
+from util import Utility
+
+from eventseries.src.main.parsers.volumeparser import VolumeParser
 
 if __name__ == '__main__':
 
@@ -38,6 +36,7 @@ if __name__ == '__main__':
         if "ceurwsUrl" in record.keys():
             event_series_titles.append(record["ceurwsUrl"])
         else:
+            # print(record)
             count_records_without_ceur_ws += 1
     print("Number of events in CEUR-WS proceedings without CEUR-WS URL = ", count_records_without_ceur_ws)
     print("Number of events in CEUR-WS proceedings with CEUR-WS URL = ", len(event_series_titles))
@@ -46,3 +45,5 @@ if __name__ == '__main__':
     matcher = Matcher()
     matches = matcher.match()
     print("Entries for event_series matching with the events based on titles: ", len(matches))
+    for match in matches:
+        print(match)

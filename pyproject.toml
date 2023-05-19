@@ -20,7 +20,12 @@ dependencies = [
     # https://github.com/pyparsing/pyparsing
     'pyparsing>=3.0.9',
     # https://github.com/savoirfairelinux/num2words
-    'num2words>=0.5.9'
+    'num2words>=0.5.9',
+    # https://github.com/WolfgangFahl/pyLookupParser
+    'pyLookupParser>=0.0.2',
+
+    'beautifulsoup4 4.12.2'
+
 ]
 
 requires-python = ">=3.8"
