@@ -4,40 +4,87 @@ import requests
 from bs4 import BeautifulSoup
 import concurrent.futures
 
+from eventseries.src.main.util.Event import Event
+from eventseries.src.main.util.Utility import Utility
 from eventseries.src.main.util.cache import Cache
 
 
 class VolumeParser:
-    def parse_ceur_ws_title(self, urls: list) -> list:
-        event_series_titles = []
+    cache = None
+
+    def __init__(self):
+        self.cache = Cache()
+
+    def parse_ceur_ws_title(self, records: list) -> list:
+
+        records_with_titles = []
 
         # Fetch the titles from the cache
-        cache = Cache()
-        cache.load_cache(os.path.join(os.path.abspath("resources"), "event_series.pickle"))
+        self.cache.load_cache(os.path.join(os.path.abspath("resources"), "ceurws_title.pickle"))
 
         # Function to extract the title from a URL
-        def extract_title(url):
-            if not cache.is_empty():
-                if cache.get(url) is not None:
-                    return cache.get(url)
-            response = requests.get(url)
-            soup = BeautifulSoup(response.content, 'html.parser')
-            tag = soup.find('span', class_='CEURVOLTITLE')
-            if tag:
-                cache.set(url, tag.get_text())
-                return tag.get_text()
+        def extract_title(record: dict) -> dict:
+            util = Utility()
+            if not self.cache.is_empty():
+                if self.cache.get(util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
+                                                          record["ceurSptUrl"])):
+                    record["ceurWsTitle"] = self.cache.get(
+                        util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
+                                                record["ceurSptUrl"]))
+                    return record
+            response = requests.get(record["ceurSptUrl"])
+            # soup = BeautifulSoup(response.content, 'html.parser')
+            # tag = soup.find('span', class_='CEURVOLTITLE')
+            if response.status_code == 200:
+                if "cvb.voltitle" in response.json() and response.json()["cvb.voltitle"] is not None and len(
+                        response.json()["cvb.voltitle"]) != 0:
+                    self.cache.set(util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
+                                                           record["ceurSptUrl"]),
+                                   response.json()["cvb.voltitle"])
+                    record["ceurWsTitle"] = response.json()["cvb.voltitle"]
+                    return record
+                else:
+                    if "cvb.title" in response.json() and response.json()["cvb.title"] is not None and len(
+                            response.json()["cvb.title"]) != 0:
+                        self.cache.set(util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
+                                                               record["ceurSptUrl"]),
+                                       response.json()["cvb.title"])
+                        record["ceurWsTitle"] = response.json()["cvb.title"]
+                        return record
+                    else:
+                        print("volume title absent from ceurspt url: " + record["ceurSptUrl"])
+                        record["ceurWsTitle"] = self.extract_title_ceurws_url(record["ceurSptUrl"])
+                        return record
+            else:
+                print("ceurspt URL absent: " + record["ceurSptUrl"])
+                record["ceurWsTitle"] = self.extract_title_ceurws_url(record["ceurSptUrl"])
+                return record
 
         # Create a ThreadPoolExecutor for parallel execution
         with concurrent.futures.ThreadPoolExecutor() as executor:
-            # Submit the tasks for each URL
-            futures = [executor.submit(extract_title, url) for url in urls]
+            # Submit the tasks for each record
+            futures = [executor.submit(extract_title, record) for record in records]
 
             # Process the completed futures
             for future in concurrent.futures.as_completed(futures):
                 title = future.result()
-                if title:
-                    event_series_titles.append(title)
+                if title["ceurWsTitle"] is not None:
+                    records_with_titles.append(title)
 
-        cache.save_cache(os.path.join(os.path.abspath("resources"), "event_series.pickle"))
-        cache.print_cache_data(os.path.join(os.path.abspath("resources"), "event_series.pickle"))
-        return event_series_titles
+        self.cache.save_cache(os.path.join(os.path.abspath("resources"), "ceurws_title.pickle"))
+        self.cache.print_cache_data(os.path.join(os.path.abspath("resources"), "ceurws_title.pickle"))
+        return records_with_titles
+
+    def extract_title_ceurws_url(self, url):
+        self.cache.load_cache(os.path.join(os.path.abspath("resources"), "ceurws_title.pickle"))
+        util = Utility()
+        url = util.generate_ceurws_url(url)
+        # print("########Searching in CEUR-WS url########" + url)
+        soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+        tag = soup.find('span', class_='CEURVOLTITLE')
+        if tag:
+            self.cache.set(util.extract_vol_number("https://ceur-ws.org/Vol-", url), tag.get_text())
+            return tag.get_text()
+        else:
+            print("########Vol title not in CEUR-WS url########" + url)
+        return

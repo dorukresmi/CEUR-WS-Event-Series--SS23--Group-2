@@ -24,7 +24,9 @@ dependencies = [
     # https://github.com/WolfgangFahl/pyLookupParser
     'pyLookupParser>=0.0.2',
 
-    'beautifulsoup4 4.12.2'
+    'beautifulsoup4>=4.12.2',
+
+    'neo4j>=5.8'
 
 ]
 
