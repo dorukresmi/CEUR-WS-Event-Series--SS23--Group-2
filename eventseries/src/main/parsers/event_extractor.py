@@ -1,5 +1,6 @@
-from eventseries.src.main.parsers.volumeparser import VolumeParser
-from eventseries.src.main.util import Utility
+from eventseries.src.main.parsers.volume_parser import VolumeParser
+from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_SPT_URL
+from eventseries.src.main.util.utility import Utility
 
 
 class EventExtractor:
@@ -16,7 +17,7 @@ class EventExtractor:
         return records_without_series
 
     def extract_ceurws_title(self, records):
-        utility = Utility.Utility()
+        utility = Utility()
         volume_parser = VolumeParser()
         count_records_without_ceur_ws = 0
         count_records_with_ceur_ws = 0
@@ -29,7 +30,7 @@ class EventExtractor:
                 count_records_with_ceur_ws += 1
                 volume_number = record["volumeNumber"]
                 record_url = "https://ceur-ws.org/Vol-" + volume_number
-                record["ceurSptUrl"] = utility.generate_ceur_spt_url(record_url)
+                record[CEUR_SPT_URL] = utility.generate_ceur_spt_url(record_url)
             else:
                 print(record)
                 count_records_without_ceur_ws += 1
@@ -44,7 +45,7 @@ class EventExtractor:
         records_with_wikidata_title = []
         count_records_without_wikidata_title = 0
         for record in records:
-            if "title" in record.keys():
+            if TITLE in record.keys():
                 records_with_wikidata_title.append(record)
             else:
                 count_records_without_wikidata_title += 1
@@ -57,7 +58,7 @@ class EventExtractor:
         records_with_wikidata_title = []
         count_records_without_wikidata_label = 0
         for record in records:
-            if "label" in record.keys():
+            if LABEL in record.keys():
                 records_with_wikidata_title.append(record)
             else:
                 count_records_without_wikidata_label += 1

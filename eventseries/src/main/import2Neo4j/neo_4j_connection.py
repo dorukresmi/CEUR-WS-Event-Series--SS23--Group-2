@@ -1,5 +1,6 @@
 from neo4j import GraphDatabase
 
+
 class Neo4jConnection:
 
     def __init__(self, uri, user, pwd):
@@ -29,4 +30,3 @@ class Neo4jConnection:
             if session is not None:
                 session.close()
         return response
-

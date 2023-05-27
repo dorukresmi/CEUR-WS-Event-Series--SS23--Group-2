@@ -31900,6 +31900,47 @@
     }, {
       "event" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106337814"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "21st Configuration Workshop"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ConfWS 2019"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2019-09-19T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2019-09-20T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q183"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-2467/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700023"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "21"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113583064"
       },
       "title" : {
@@ -31941,47 +31982,6 @@
       "ordinal" : {
         "type" : "literal",
         "value" : "6"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q106337814"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "21st Configuration Workshop"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ConfWS 2019"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2019-09-19T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2019-09-20T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q183"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-2467/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700023"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "21"
       }
     }, {
       "event" : {
@@ -33084,47 +33084,6 @@
     }, {
       "event" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113623443"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "5th Workshop on Linguistic and Cognitive Approaches to Dialog Agents"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "LaCATODA 2019"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2019-08-12T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2019-08-12T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q148"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-2452/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113623432"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "5"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113583066"
       },
       "title" : {
@@ -33162,6 +33121,47 @@
       "series" : {
         "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113646198"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "5"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113623443"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "5th Workshop on Linguistic and Cognitive Approaches to Dialog Agents"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "LaCATODA 2019"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2019-08-12T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2019-08-12T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q148"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-2452/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113623432"
       },
       "ordinal" : {
         "type" : "literal",
@@ -47966,6 +47966,47 @@
     }, {
       "event" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106333489"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "10th Forum Media Technology and 3rd All Around Audio Symposium"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Forum Media Technology 2017"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-11-29T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-11-30T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q40"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-2009/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699563"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "10"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113618577"
       },
       "title" : {
@@ -48007,47 +48048,6 @@
       "ordinal" : {
         "type" : "literal",
         "value" : "9"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q106333489"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "10th Forum Media Technology and 3rd All Around Audio Symposium"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Forum Media Technology 2017"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-11-29T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-11-30T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q40"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-2009/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699563"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "10"
       }
     }, {
       "event" : {
@@ -49692,6 +49692,46 @@
     }, {
       "event" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q47912910"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ISWC 2017"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-10-21T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-10-25T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q40"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-1963/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6053150"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "16"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "https://iswc2017.semanticweb.org"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113616144"
       },
       "title" : {
@@ -49733,46 +49773,6 @@
       "ordinal" : {
         "type" : "literal",
         "value" : "8"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q47912910"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ISWC 2017"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-10-21T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-10-25T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q40"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-1963/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q6053150"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "16"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "https://iswc2017.semanticweb.org"
       }
     }, {
       "event" : {
@@ -54163,6 +54163,47 @@
     }, {
       "event" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106338658"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "10th International i* Workshop co-located with the 29th International Conference on Advanced Information Systems Engineering"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "iStar 2017"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-06-12T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-06-13T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q183"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-1829/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698908"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "10"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113625198"
       },
       "title" : {
@@ -54204,47 +54245,6 @@
       "dblpEventId" : {
         "type" : "literal",
         "value" : "conf/caise/radar2017"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q106338658"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "10th International i* Workshop co-located with the 29th International Conference on Advanced Information Systems Engineering"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "iStar 2017"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-06-12T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-06-13T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q183"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-1829/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698908"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "10"
       }
     }, {
       "event" : {

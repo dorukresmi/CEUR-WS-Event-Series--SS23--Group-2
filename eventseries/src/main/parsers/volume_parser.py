@@ -1,12 +1,12 @@
+import concurrent.futures
 import os
 
 import requests
 from bs4 import BeautifulSoup
-import concurrent.futures
 
-from eventseries.src.main.util.Event import Event
-from eventseries.src.main.util.Utility import Utility
 from eventseries.src.main.util.cache import Cache
+from eventseries.src.main.util.record_attributes import CEUR_WS_TITLE, CEUR_SPT_URL
+from eventseries.src.main.util.utility import Utility
 
 
 class VolumeParser:
@@ -27,37 +27,37 @@ class VolumeParser:
             util = Utility()
             if not self.cache.is_empty():
                 if self.cache.get(util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
-                                                          record["ceurSptUrl"])):
-                    record["ceurWsTitle"] = self.cache.get(
+                                                          record[CEUR_SPT_URL])):
+                    record[CEUR_WS_TITLE] = self.cache.get(
                         util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
-                                                record["ceurSptUrl"]))
+                                                record[CEUR_SPT_URL]))
                     return record
-            response = requests.get(record["ceurSptUrl"])
+            response = requests.get(record[CEUR_SPT_URL])
             # soup = BeautifulSoup(response.content, 'html.parser')
             # tag = soup.find('span', class_='CEURVOLTITLE')
             if response.status_code == 200:
                 if "cvb.voltitle" in response.json() and response.json()["cvb.voltitle"] is not None and len(
                         response.json()["cvb.voltitle"]) != 0:
                     self.cache.set(util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
-                                                           record["ceurSptUrl"]),
+                                                           record[CEUR_SPT_URL]),
                                    response.json()["cvb.voltitle"])
-                    record["ceurWsTitle"] = response.json()["cvb.voltitle"]
+                    record[CEUR_WS_TITLE] = response.json()["cvb.voltitle"]
                     return record
                 else:
                     if "cvb.title" in response.json() and response.json()["cvb.title"] is not None and len(
                             response.json()["cvb.title"]) != 0:
                         self.cache.set(util.extract_vol_number('http://ceurspt.wikidata.dbis.rwth-aachen.de/Vol-',
-                                                               record["ceurSptUrl"]),
+                                                               record[CEUR_SPT_URL]),
                                        response.json()["cvb.title"])
-                        record["ceurWsTitle"] = response.json()["cvb.title"]
+                        record[CEUR_WS_TITLE] = response.json()["cvb.title"]
                         return record
                     else:
-                        print("volume title absent from ceurspt url: " + record["ceurSptUrl"])
-                        record["ceurWsTitle"] = self.extract_title_ceurws_url(record["ceurSptUrl"])
+                        print("volume title absent from ceurspt url: " + record[CEUR_SPT_URL])
+                        record[CEUR_WS_TITLE] = self.extract_title_ceurws_url(record[CEUR_SPT_URL])
                         return record
             else:
-                print("ceurspt URL absent: " + record["ceurSptUrl"])
-                record["ceurWsTitle"] = self.extract_title_ceurws_url(record["ceurSptUrl"])
+                print("ceurspt URL absent: " + record[CEUR_SPT_URL])
+                record[CEUR_WS_TITLE] = self.extract_title_ceurws_url(record[CEUR_SPT_URL])
                 return record
 
         # Create a ThreadPoolExecutor for parallel execution
@@ -68,7 +68,7 @@ class VolumeParser:
             # Process the completed futures
             for future in concurrent.futures.as_completed(futures):
                 title = future.result()
-                if title["ceurWsTitle"] is not None:
+                if title[CEUR_WS_TITLE] is not None:
                     records_with_titles.append(title)
 
         self.cache.save_cache(os.path.join(os.path.abspath("resources"), "ceurws_title.pickle"))

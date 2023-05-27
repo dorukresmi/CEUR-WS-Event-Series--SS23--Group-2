@@ -1,6 +1,8 @@
 import datetime
 import re
 
+from eventseries.src.main.util.record_attributes import LABEL, TITLE, CEUR_WS_TITLE
+
 
 class Utility(object):
     def serialize_datetime(obj):
@@ -32,8 +34,23 @@ class Utility(object):
     def check_unmatched_titles_labels(self, records):
         records_with_diff_labels = []
         for record in records:
-            if "title" in record and "eventLabel" in record:
-                if record["title"] != record["eventLabel"]:
+            if TITLE in record and LABEL in record:
+                if record[TITLE] != record[LABEL]:
                     records_with_diff_labels.append(record)
         return records_with_diff_labels
 
+    def check_title_label(self, records):
+        """Assuming the ground truth is the title in CEUR-WS URL"""
+        count_diff_titles = 0
+        count_diff_labels = 0
+        for record in records:
+            if (CEUR_WS_TITLE and TITLE in record) and (
+                    record[CEUR_WS_TITLE] != record[TITLE]):
+                count_diff_titles += 1
+            if (CEUR_WS_TITLE and LABEL in record) and (
+                    record[CEUR_WS_TITLE] != record[LABEL]):
+                count_diff_labels += 1
+        print("Number of records with different CEUR-WS titles and wikidata titles: ", count_diff_titles)
+        print("Number of records with different CEUR-WS titles and wikidata labels: ", count_diff_labels)
+        print("Number of records with different wikidata titles and wikidata labels: ",
+              len(self.check_unmatched_titles_labels(records)))
