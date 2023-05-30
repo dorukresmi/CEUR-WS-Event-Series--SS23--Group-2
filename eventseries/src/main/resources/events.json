@@ -47966,47 +47966,6 @@
     }, {
       "event" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q106333489"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "10th Forum Media Technology and 3rd All Around Audio Symposium"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Forum Media Technology 2017"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-11-29T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-11-30T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q40"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-2009/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699563"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "10"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113618577"
       },
       "title" : {
@@ -48048,6 +48007,47 @@
       "ordinal" : {
         "type" : "literal",
         "value" : "9"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106333489"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "10th Forum Media Technology and 3rd All Around Audio Symposium"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Forum Media Technology 2017"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-11-29T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-11-30T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q40"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-2009/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699563"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "10"
       }
     }, {
       "event" : {
@@ -54725,6 +54725,47 @@
     }, {
       "event" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113625348"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "4th Workshop on Linked Data Quality"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "LDQ 2017"
+      },
+      "startTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-05-28T00:00:00Z"
+      },
+      "endTime" : {
+        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
+        "type" : "literal",
+        "value" : "2017-05-29T00:00:00Z"
+      },
+      "country" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q215"
+      },
+      "ceurwsUrl" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/Vol-1824/"
+      },
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113625374"
+      },
+      "ordinal" : {
+        "type" : "literal",
+        "value" : "4"
+      }
+    }, {
+      "event" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q113625164"
       },
       "title" : {
@@ -54766,47 +54807,6 @@
       "dblpEventId" : {
         "type" : "literal",
         "value" : "conf/esws/mepdaw2017"
-      }
-    }, {
-      "event" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113625348"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "4th Workshop on Linked Data Quality"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "LDQ 2017"
-      },
-      "startTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-05-28T00:00:00Z"
-      },
-      "endTime" : {
-        "datatype" : "http://www.w3.org/2001/XMLSchema#dateTime",
-        "type" : "literal",
-        "value" : "2017-05-29T00:00:00Z"
-      },
-      "country" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q215"
-      },
-      "ceurwsUrl" : {
-        "type" : "uri",
-        "value" : "http://ceur-ws.org/Vol-1824/"
-      },
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113625374"
-      },
-      "ordinal" : {
-        "type" : "literal",
-        "value" : "4"
       }
     }, {
       "event" : {

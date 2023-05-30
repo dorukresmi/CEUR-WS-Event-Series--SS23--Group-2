@@ -35,11 +35,11 @@ if __name__ == '__main__':
     matcher = Matcher()
     '''Remove the events that already have a series assigned'''
     records_without_series = event_extractor.check_events_with_series(records)
-    print("Records that do not have series assigned: ", len(records_without_series))
+    print("Length of the records that do not have series assigned: ", len(records_without_series))
     records_with_titles = event_extractor.extract_ceurws_title(records_without_series)
     utility.check_title_label(records_with_titles)
     matches_with_ceurws_titles = matcher.match(records_with_titles, CEUR_WS_TITLE)
-    print("Matches from title of CEUR-WS url: ", len(matches_with_ceurws_titles))
+    print("Full matches from title of CEUR-WS url: ", len(matches_with_ceurws_titles))
 
     records_remaining = [record for record in records_without_series if record not in matches_with_ceurws_titles]
     print("RECORDS REMAINING: ", len(records_remaining))
@@ -48,14 +48,19 @@ if __name__ == '__main__':
                                                  TITLE)
     print("Matches from title of event in wikidata: ", len(matches_with_wikidata_titles))
 
-    # print("######Matches intersection######", matches_with_ceures_titles and records_remaining)
-
     records_remaining = [record for record in records_remaining if record not in matches_with_wikidata_titles]
     print("RECORDS REMAINING: ", len(records_remaining))
+
     '''Events having same title and label in wikidata are not required to be matched again'''
     records_with_diff_labels = utility.check_unmatched_titles_labels(records_remaining)
     matches_with_wikidata_labels = matcher.match(event_extractor.extract_wikidata_label(records_with_diff_labels),
                                                  LABEL)
+    records_remaining_with_no_matches = [record for record in records_remaining if
+                                         record not in matches_with_wikidata_labels]
+    '''Dump events where no matches are found'''
+    with open(os.path.join(resources_path, "events_without_matches.json"), "w", encoding="utf-8") as final:
+        json.dump(records_remaining_with_no_matches, final, default=Utility.serialize_datetime)
+
     print("Matches from label of event in wikidata: ", len(matches_with_wikidata_labels))
 
     print("Total matches = ",
