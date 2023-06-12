@@ -187,13 +187,24 @@ class DblpContext:
         if driver_instance is None:
             driver.quit()
 
-    def crawl_events(self, event_df: List[str]):
+    def _resolve_redirecting(self, dblp_id: str, content: str):
+        if 'Redirecting ...' not in content:
+            return
+        soup = BeautifulSoup(content, 'html.parser', parse_only=SoupStrainer('div', {'id': 'main'}))
+        real_url = soup.find('div', {'id': 'main'}).find('p', recursive=False).find('a').attrs['href']
+        redirected_dblp_id = real_url.removeprefix('https://dblp.org/db/').removesuffix('/index.html')
+        redirected_content = self.request_or_load_dblp(redirected_dblp_id)
+        self.cache_dblp_id(dblp_id, redirected_content)
+
+    def crawl_events(self, event_dblp_ids: List[str]):
         counter = 0
-        print("Crawling " + str(len(event_df)) + "...")
-        for dblp_event in event_df:
+        print("Crawling " + str(len(event_dblp_ids)) + "...")
+        for dblp_event in event_dblp_ids:
             counter += 1
             try:
-                self.request_or_load_dblp(dblp_db_entry=dblp_event, wait_time=1)
+                html = self.request_or_load_dblp(dblp_db_entry=dblp_event, wait_time=1)
+                self._resolve_redirecting(dblp_event, html, )
+
             except ValueError as e:
                 print(f"Got exception for event: " + dblp_event + " with error " + str(e))
             parent = Path(dblp_event).parent
