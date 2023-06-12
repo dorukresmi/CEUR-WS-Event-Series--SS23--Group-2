@@ -5,11 +5,14 @@ from typing import Optional, Union, List, Tuple
 
 import pandas as pd
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
+
+from eventseries.src.main.dblp.EventSeries import EventSeries
+from eventseries.src.main.dblp.VenueInformation import VenueInformation
 
 
 class DblpContext:
@@ -40,13 +43,13 @@ class DblpContext:
         cleaned_id = DblpContext._validate_and_clean_dblp_id(dblp_id)
         return self.dblp_cache[cleaned_id]
 
-    def store_dblp_id(self, dblp_id: str, content: str):
+    def cache_dblp_id(self, dblp_id: str, content: str):
         cleaned_id = DblpContext._validate_and_clean_dblp_id(dblp_id)
         if cleaned_id in self.dblp_cache:
             print("Warning! Overriding cached content: " + dblp_id)
         self.dblp_cache[cleaned_id] = content
 
-    def is_stored(self, dblp_id: str):
+    def is_cached(self, dblp_id: str):
         cleaned_id = DblpContext._validate_and_clean_dblp_id(dblp_id)
         return cleaned_id in self.dblp_cache
 
@@ -70,7 +73,7 @@ class DblpContext:
         self.dblp_cache.update(file_dictionary)
         print(f"Loaded dblp cache. Found {len(self.dblp_cache)} entries.")
 
-    def store_cache(self):
+    def store_cache(self, overwrite=False):
 
         if not self.dblp_conf_path.is_dir():
             raise ValueError("The provided path is not a directory.")
@@ -78,7 +81,7 @@ class DblpContext:
         for file_name, file_content in self.dblp_cache.items():
             file_path = self.dblp_base_path / file_name
             full_file = file_path.with_suffix(".html")
-            if not full_file.exists():
+            if not full_file.exists() or overwrite:
                 full_file.parent.mkdir(parents=True, exist_ok=True)
                 with full_file.open(mode='w') as f:
                     f.write(file_content)
@@ -113,15 +116,27 @@ class DblpContext:
 
     def request_or_load_dblp(self, dblp_db_entry: str, ignore_cache: bool = False, wait_time: Optional[float] = None,
                              **kwargs):
-        if not ignore_cache and self.is_stored(dblp_db_entry):
+        if not ignore_cache and self.is_cached(dblp_db_entry) and self.get_cached(dblp_db_entry) != '':
             return self.get_cached(dblp_db_entry)
         else:
             response_text = DblpContext.request_dblp(dblp_url=self.base_url + dblp_db_entry, **kwargs)
             if wait_time is not None and wait_time > 0.0:
                 time.sleep(wait_time)
         if not ignore_cache:
-            self.store_dblp_id(dblp_db_entry, response_text)
+            self.cache_dblp_id(dblp_db_entry, response_text)
         return response_text
+
+    def get_cached_series_keys(self):
+        return [key for key in self.dblp_cache.keys() if key.count('/') == 1 and key.startswith('conf/')]
+
+    def get_events_for_series(self, series_id: str):
+        if not self.is_cached(series_id):
+            raise ValueError("Series id is not stored in cache: " + series_id)
+        return [key for key in self.dblp_cache.keys() if key.startswith(series_id)]
+
+    def get_series_with_events(self, series_ids: Optional[List[str]] = None):
+        series_keys = self.get_cached_series_keys() if series_ids is None else series_ids
+        return {key: self.get_events_for_series(key) for key in series_keys}
 
     @staticmethod
     def extract_parent_id(dblp_event_page_content: str) -> str:
@@ -218,13 +233,47 @@ class DblpContext:
                 self.store_cache()
 
 
-if __name__ == '__main__':
-    # import_old()
+def extract_venue_information_of_cached(self):
+    parse_restriction = SoupStrainer(id='info-section')
+    soups = {dblp_id: BeautifulSoup(html, 'html.parser', parse_only=parse_restriction).find(id='info-section')
+             for (dblp_id, html) in self.dblp_cache.items()}
+    df = pd.DataFrame(soups.items(), columns=['dblp_id', 'tag'])
+    df = df[df.tag.notna()]  # filter out sites without venue information
+    df = df[df.tag.apply(lambda div: len(div.find_all()) != 0)]  # filter out emtpy divs
+    df['venue'] = df['tag'].map(lambda div: VenueInformation.parse_venue_div(div))
+
+
+def explore_em_tags(df: pd.DataFrame):
+    def li_contents(li):
+        return [s for s in li.find_all(string=True, recursive=False) if len(s.strip()) != 0] \
+            + li.find_all(lambda tag: tag.name not in ['em', 'k'])  # some wierd custom empty <k> elements
+
+    li_tags = df.tag.explode(ignore_index=True)
+    ems = pd.DataFrame(columns=['qualifier', 'content'])
+    ems.qualifier = li_tags.map(lambda li: li.find('em').string)
+    ems.content = li_tags.map(li_contents)
+
+
+def crawl_all_events_without_series():
     context = DblpContext(load_cache=True, store_on_delete=True)
 
     with open(Path("..") / 'resources' / 'EventsWithoutSeries.json') as events_json_file:
         events_df = pd.DataFrame(json.loads(events_json_file.read()))
         with_dblp = events_df[events_df.dblpEventId.notna()]
         context.crawl_events(with_dblp.dblpEventId)
-    del context
-    # context.crawl_conf_index(index_url='https://dblp.org/db/conf/index.html', pos=201)
+
+
+if __name__ == '__main__':
+    ctx = DblpContext(load_cache=False)
+
+    # ctx.extract_venue_information_of_cached()
+    has_part_and_is_part_of = 'conf/oopsla'
+    status = 'conf/tools'
+    successor = 'conf/tools'
+    not_to_be_confused_with = 'conf/atal'
+    predecessor = 'conf/staf'
+    ctx.crawl_events(['conf/rml'])
+    ctx.store_cache(overwrite=True)
+
+    series_contents = [ctx.get_cached(series) for series in ctx.get_cached_series_keys()]
+    event_series = [EventSeries.from_soup(BeautifulSoup(series, 'html.parser')) for series in series_contents]
