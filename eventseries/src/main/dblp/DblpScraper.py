@@ -9,8 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 
-from eventseries.src.main.dblp.EventClasses import EventSeries
-from eventseries.src.main.dblp.VenueInformationClasses import VenueInformation
+from eventseries.src.main.dblp.DblpParsing import parse_venue_div, event_series_from_soup
 from eventseries.src.main.dblp.dblp import DblpContext
 
 
@@ -26,7 +25,7 @@ class DblpScraper:
         df = pd.DataFrame(soups.items(), columns=['dblp_id', 'tag'])
         df = df[df.tag.notna()]  # filter out sites without venue information
         df = df[df.tag.apply(lambda div: len(div.find_all()) != 0)]  # filter out emtpy divs
-        df['venue'] = df['tag'].map(lambda div: VenueInformation.parse_venue_div(div))
+        df['venue'] = df['tag'].map(lambda div: parse_venue_div(div))
         return df
 
     def crawl_all_events_without_series(self,
@@ -119,6 +118,8 @@ class DblpScraper:
 if __name__ == '__main__':
     ctx = DblpContext(load_cache=True)
     scraper = DblpScraper(ctx)
-
-    series_contents = [ctx.get_cached(series) for series in ctx.get_cached_series_keys()]
-    event_series = [EventSeries.from_soup(BeautifulSoup(series, 'html.parser')) for series in series_contents]
+    event_series_ids = ctx.get_cached_series_keys()
+    event_series_ids.remove('conf/birthday')  # exclude Festschriften: Birthdays, In Memory of ..., In Honor of ...
+    event_series_ids.remove('conf/ac')  # remove advanced courses
+    series_contents = [ctx.get_cached(series) for series in event_series_ids]
+    event_series = [event_series_from_soup(BeautifulSoup(series, 'html.parser')) for series in series_contents]
