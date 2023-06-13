@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 
-from eventseries.src.main.dblp.DblpParsing import parse_venue_div, event_series_from_soup
+from eventseries.src.main.dblp.DblpParsing import parse_venue_div
 from eventseries.src.main.dblp.dblp import DblpContext
 
 
@@ -113,13 +113,3 @@ class DblpScraper:
                 print("Loaded: " + str(counter))
             if counter % 200 == 0:
                 self.ctx.store_cache()
-
-
-if __name__ == '__main__':
-    ctx = DblpContext(load_cache=True)
-    scraper = DblpScraper(ctx)
-    event_series_ids = ctx.get_cached_series_keys()
-    event_series_ids.remove('conf/birthday')  # exclude Festschriften: Birthdays, In Memory of ..., In Honor of ...
-    event_series_ids.remove('conf/ac')  # remove advanced courses
-    series_contents = [ctx.get_cached(series) for series in event_series_ids]
-    event_series = [event_series_from_soup(BeautifulSoup(series, 'html.parser')) for series in series_contents]
