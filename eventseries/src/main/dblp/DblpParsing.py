@@ -1,5 +1,7 @@
 import itertools
+import pickle
 from datetime import datetime
+from pathlib import Path
 from typing import Optional, Tuple, Union, List
 import re
 
@@ -9,6 +11,7 @@ from eventseries.src.main.dblp.EventClasses import Event, DblpEvent, EventSeries
 from eventseries.src.main.dblp.VenueInformationClasses import VenueInformation, IsPartOf, NameWithOptionalReference, \
     Predecessor, Related, Status, Successor, YearRange
 from eventseries.src.main.dblp.VenueInformationClasses import HasPart
+from eventseries.src.main.dblp.dblp import DblpContext
 
 
 class EventTitleParser:
@@ -152,7 +155,7 @@ def event_series_from_soup(soup: BeautifulSoup, given_dblp_id: Optional[str] = N
         EventSeriesParser.extract_dblp_id_from_header_tag(header)
 
     headline = header.find('h1')
-    name = headline.string
+    name = str(headline.string)
     if 'Redirecting' in name:
         print("Suspicious name found: " + name + " for dblp_id: " + dblp_id)
     opt_abbreviation = re.search(r'\((\w{1,20})\)', name)
@@ -332,3 +335,22 @@ def parse_venue_div(info_section_div: BeautifulSoup) -> Optional[VenueInformatio
         return VenueInformation(**parameter)
     except Exception as e:
         print(f'Could not parse div: {info_section_div} got exception: {str(e)}')
+
+
+def store_event_series(
+        context: DblpContext,
+        path: Path = Path('.') / '..' / 'resources' / 'dblp_event_series.pyc'
+):
+    event_series_ids = context.get_cached_series_keys()
+    event_series_ids.remove('conf/birthday')  # exclude Festschriften: Birthdays, In Memory of ..., In Honor of ...
+    event_series_ids.remove('conf/ac')  # remove advanced courses
+    series_contents = [context.get_cached(series) for series in event_series_ids]
+    event_series = [event_series_from_soup(BeautifulSoup(series, 'html.parser')) for series in series_contents]
+    with open(path, 'wb') as file:
+        pickle.dump(obj=event_series, file=file)
+
+
+def load_event_series(path: Path = Path('.') / '..' / 'resources' / 'dblp_event_series.pyc') -> List[EventSeries]:
+    with open(path, 'rb') as file:
+        event_series: List[EventSeries] = pickle.load(file)
+        return event_series
