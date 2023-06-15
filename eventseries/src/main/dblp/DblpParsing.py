@@ -339,7 +339,7 @@ def parse_venue_div(info_section_div: BeautifulSoup) -> Optional[VenueInformatio
 
 def store_event_series(
         context: DblpContext,
-        path: Path = Path('.') / '..' / 'resources' / 'dblp_event_series.pyc'
+        path: Path = Path('.') / '..' / 'resources' / 'dblp_event_series.pickle'
 ):
     event_series_ids = context.get_cached_series_keys()
     event_series_ids.remove('conf/birthday')  # exclude Festschriften: Birthdays, In Memory of ..., In Honor of ...
@@ -350,7 +350,7 @@ def store_event_series(
         pickle.dump(obj=event_series, file=file)
 
 
-def load_event_series(path: Path = Path('.') / '..' / 'resources' / 'dblp_event_series.pyc') -> List[EventSeries]:
+def load_event_series(path: Path = Path('.') / '..' / 'resources' / 'dblp_event_series.pickle') -> List[EventSeries]:
     with open(path, 'rb') as file:
         event_series: List[EventSeries] = pickle.load(file)
         return event_series
