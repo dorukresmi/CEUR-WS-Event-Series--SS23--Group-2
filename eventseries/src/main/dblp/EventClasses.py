@@ -25,3 +25,6 @@ class EventSeries:
     abbreviation: Optional[str]
     venue_information: Optional[VenueInformation]
     mentioned_events: List[Event]
+
+    def __hash__(self) -> int:
+        return hash(self.dblp_id)
