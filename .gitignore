@@ -160,6 +160,7 @@ cython_debug/
 .idea/
 
 .DS_Store
+/eventseries/src/main/wikicfp/wikicfp_data.py
 
 
 **/__pycache__
