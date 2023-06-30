@@ -1,4 +1,66 @@
-This is where we commit our changes for the event series
+# Event Series Completion Group Project 2023
 
-Add it after pip install .
-python -m spacy download en_core_web_sm
+### Task
+
+1. Find [CEUR-WS](https://ceur-ws.org/) related academic events in [wikidata](https://www.wikidata.org/wiki/Q27230297)
+2. Some events have the [property 179](https://www.wikidata.org/wiki/Property:P179) (**part of the series**)
+3. For all events that dont have this property find whether,
+    - they are part of a conference/workshop series or
+    - they are a standalone event
+6. Match events to their event series and update the property.
+
+#### Relations of Proceedings, Events, Series
+
+```mermaid
+classDiagram
+    note for Proceeding "Those are in CEUR-WS"
+    class Proceeding {
+        String title
+        Int Volume
+    }
+    class Event {
+        String title
+        Int ordinal
+        Optional~String~ dblpEventId(P10692)
+    }
+
+    class Conference
+
+    class Workshop
+
+    note for `CEUR-WS (Q27230297)` "Only proceedings for this\n series are of interest"
+    class `CEUR-WS (Q27230297)`
+    <<Singleton>> `CEUR-WS (Q27230297)`
+
+    note for EventSeries "This relation is what\n we need to find"
+    class EventSeries {
+        String title
+        String acronym
+    }
+
+    Event <|-- Workshop: instance of (P31)
+    Event <|-- Conference: instance of (P31)
+    Proceeding --> Event: is proceedings from
+    Proceeding --> `Conference Proceedings Series (Q27785883)`: part of the series
+
+`Conference Proceedings Series (Q27785883)` <|--  `CEUR-WS (Q27230297)`
+Event --> EventSeries: part of the series (P179)
+```
+
+#### Current Progress
+
+- Extracted relevant events from wikidata
+- Implemented first matching-algorithms
+- Parsed and scraped events and their series from [dblp](https://dblp.org) that are related to CEUR-WS
+    - Extracted meta-information, event-information, event-series-information
+    - Matched conferences to their series if they have `dblpEventSeriesId`
+- ![](docs/Sankey Progress 23.06.png)
+
+### Structure
+
+- NOTE: The project organization is currently under refactoring
+- The main module is `eventseries`
+    - More information about *dblp* can be found in `eventseries/src/main/dblp`
+    - Resources like `.json`, `.pickle` or `.csv` files are located in `eventseries/src/main/resources`
+- Dataexploration and experiments are within notebooks in `notebooks`
+    - Data used within the notebooks should be placed in `data`
