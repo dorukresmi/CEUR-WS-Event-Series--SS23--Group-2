@@ -15,9 +15,15 @@ from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_WS_TI
 from eventseries.src.main.util.utility import Utility
 from eventseries.src.main.matcher.dblp_matcher import DblpMatcher
 from query.queried_events import Events
+from import2Neo4j import ImportData_temp
 
 if __name__ == '__main__':
-
+    importDataTemp = ImportData_temp.ImportData()
+    # importDataTemp.fetch_data_and_import()
+    # importDataTemp.import_data_to_neo4j(importDataTemp.new_func())
+    # importDataTemp.import_event_series_to_neo4j(importDataTemp.new_func_series())
+    # importDataTemp.counter_func()
+    importDataTemp.check_event_with_series(importDataTemp.new_func(),importDataTemp.new_func_series())
 
     '''Stored the queried events in resources/events.json '''
     events = Events()
