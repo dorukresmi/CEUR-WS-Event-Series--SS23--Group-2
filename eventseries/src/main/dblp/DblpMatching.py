@@ -29,7 +29,7 @@ def match_wikidata_conference_to_series_dblp_id(
 
 if __name__ == '__main__':
     path_to_wikidata_events = Path("") / ".." / "resources" / "EventsWithoutSeries.json"
-    conferences = match_wikidata_conference_to_series_dblp_id(
+    match_wikidata_conference_to_series_dblp_id(
         pd.read_json(path_to_wikidata_events),
         load_event_series()
     )
