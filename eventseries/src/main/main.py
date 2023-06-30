@@ -18,6 +18,7 @@ from query.queried_events import Events
 
 if __name__ == '__main__':
 
+
     '''Stored the queried events in resources/events.json '''
     events = Events()
     events.query()
