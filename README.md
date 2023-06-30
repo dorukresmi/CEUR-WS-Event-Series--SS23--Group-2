@@ -54,7 +54,7 @@ Event --> EventSeries: part of the series (P179)
 - Parsed and scraped events and their series from [dblp](https://dblp.org) that are related to CEUR-WS
     - Extracted meta-information, event-information, event-series-information
     - Matched conferences to their series if they have `dblpEventSeriesId`
-- ![](docs/Sankey Progress 23.06.png)
+- ![Sankey plot about the progress](docs/Sankey&#32;Progress&#32;23.06.png)
 
 ### Structure
 
