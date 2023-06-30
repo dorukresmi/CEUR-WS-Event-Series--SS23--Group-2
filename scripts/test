@@ -12,4 +12,4 @@ greentests() {
 }
 
 greentests
-python -m unittest discover eventseries/tests
+python -m unittest discover eventseries
