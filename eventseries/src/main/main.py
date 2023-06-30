@@ -8,11 +8,12 @@ import os
 
 from plp.ordinal import Ordinal
 
-from eventseries.src.main.import2neo4j.import_data import ImportData
+from eventseries.src.main.matcher.nlp_matcher import NlpMatcher
 from eventseries.src.main.parsers.event_extractor import EventExtractor
-from eventseries.src.main.util.matcher import Matcher
-from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_WS_TITLE
+from eventseries.src.main.matcher.wikidata_matcher import Matcher
+from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_WS_TITLE, DBLP_EVENT_ID
 from eventseries.src.main.util.utility import Utility
+from eventseries.src.main.matcher.dblp_matcher import DblpMatcher
 from query.queried_events import Events
 
 if __name__ == '__main__':
@@ -44,8 +45,9 @@ if __name__ == '__main__':
     records_remaining = [record for record in records_without_series if record not in matches_with_ceurws_titles]
     print("RECORDS REMAINING: ", len(records_remaining))
 
-    matches_with_wikidata_titles = matcher.match(event_extractor.extract_wikidata_title(records_remaining),
-                                                 TITLE)
+    events_with_wikidata_titles = event_extractor.extract_wikidata_title(records_remaining)
+
+    matches_with_wikidata_titles = matcher.match(events_with_wikidata_titles, TITLE)
     print("Matches from title of event in wikidata: ", len(matches_with_wikidata_titles))
 
     records_remaining = [record for record in records_remaining if record not in matches_with_wikidata_titles]
@@ -61,6 +63,10 @@ if __name__ == '__main__':
     with open(os.path.join(resources_path, "events_without_matches.json"), "w", encoding="utf-8") as final:
         json.dump(records_remaining_with_no_matches, final, default=Utility.serialize_datetime)
 
+    events_with_dblp_event_id = [event for event in records_remaining_with_no_matches if 'dblpEventId' in event]
+    print("Records without matches: ", len(records_remaining_with_no_matches))
+    print("Records with dblpEventId: ", len(events_with_dblp_event_id))
+
     print("Matches from label of event in wikidata: ", len(matches_with_wikidata_labels))
 
     print("Total matches = ",
@@ -69,5 +75,13 @@ if __name__ == '__main__':
     print(len(matches_with_ceurws_titles and matches_with_wikidata_titles and matches_with_wikidata_labels))
 
     ## Import data to neo4j
-    import_data = ImportData()
-    import_data.fetch_data_and_import()
+    # TODO: Enable when local neo4j instance is running
+    # import_data = ImportData()
+    # import_data.fetch_data_and_import()
+
+    # nlp matches
+    nlp_matcher = NlpMatcher(event_extractor, matcher)
+    nlp_matcher.match()
+
+    # nlp_matcher.
+

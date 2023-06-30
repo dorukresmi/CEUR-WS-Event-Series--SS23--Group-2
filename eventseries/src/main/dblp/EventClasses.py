@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from typing import Optional, List
 
-from VenueInformationClasses import VenueInformation
-
+# from VenueInformationClasses import VenueInformation
+from eventseries.src.main.dblp.VenueInformationClasses import VenueInformation
 
 @dataclass
 class Event:

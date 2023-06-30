@@ -6,6 +6,7 @@ import pickle
 class Matcher:
     def __init__(self):
         self.event_series = []
+        self.wikidata_matches = []
 
     def match(self, records_with_potential_attr, attr):
         titles = [record[attr] for record in records_with_potential_attr]
@@ -16,10 +17,8 @@ class Matcher:
             for record in records_with_potential_attr:
                 if attr in record and record[attr] == match:
                     matching_records.append(record)
+                    self.wikidata_matches.append(record)
         return matching_records
-
-
-
 
     def get_pickle_data(self, filename):
         cache_data = {}
@@ -36,3 +35,6 @@ class Matcher:
 
         # Print the extracted titles
         return titles
+
+    def get_all_matches(self):
+        return self.wikidata_matches

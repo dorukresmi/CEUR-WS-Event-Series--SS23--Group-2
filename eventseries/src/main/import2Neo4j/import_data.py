@@ -1,6 +1,6 @@
 import os
 
-from eventseries.src.main.import2neo4j.neo_4j_connection import Neo4jConnection
+from eventseries.src.main.import2Neo4j.neo_4j_connection import Neo4jConnection
 
 
 class ImportData:

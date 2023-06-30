@@ -2,6 +2,8 @@ import datetime
 import re
 
 from eventseries.src.main.util.record_attributes import LABEL, TITLE, CEUR_WS_TITLE
+from eventseries.src.main.dblp.EventClasses import EventSeries
+from typing import List
 
 
 class Utility(object):
@@ -54,3 +56,14 @@ class Utility(object):
         print("Number of records with different CEUR-WS titles and wikidata labels: ", count_diff_labels)
         print("Number of records with different wikidata titles and wikidata labels: ",
               len(self.check_unmatched_titles_labels(records)))
+
+    '''One-to-one mapping dblp events to events series '''
+    def event_titles_to_event_series(self, events_dataset: List[EventSeries]):
+        matches = {}
+        for event_series in events_dataset:
+            for event in event_series.mentioned_events:
+                matches[event] = event_series.name
+        return matches
+
+
+

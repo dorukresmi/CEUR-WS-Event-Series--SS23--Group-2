@@ -5,7 +5,7 @@ Created on 2023-05-01
 '''
 import unittest
 
-from eventseries.src.main.util.matcher import Matcher
+from eventseries.src.main.matcher.wikidata_matcher import Matcher
 
 
 class TestMatcher(unittest.TestCase):

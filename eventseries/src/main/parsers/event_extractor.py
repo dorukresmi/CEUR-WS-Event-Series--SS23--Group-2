@@ -1,16 +1,21 @@
 from eventseries.src.main.parsers.volume_parser import VolumeParser
-from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_SPT_URL
+from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_SPT_URL, SERIES
 from eventseries.src.main.util.utility import Utility
 
 
 class EventExtractor:
 
+    def __init__(self) -> None:
+        self.records_with_series = []
+
     def check_events_with_series(self, records):
         records_without_series = []
         for record in records:
             '''Events that are already part of the event series in wikidata'''
-            if "series" not in record.keys():
+            if SERIES not in record.keys():
                 records_without_series.append(record)
+            else:
+                self.records_with_series.append(record)
 
         print("Number of events in CEUR-WS proceedings with series already matched = ",
               len(records) - len(records_without_series))
@@ -66,3 +71,7 @@ class EventExtractor:
         print("Number of CEUR-WS events in wikidata without label attribute = ",
               count_records_without_wikidata_label)
         return records_with_wikidata_title
+
+
+    def get_existing_matched_events(self):
+        return self.records_with_series

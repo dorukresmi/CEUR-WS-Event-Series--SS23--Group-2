@@ -1,22 +1,51 @@
 {
   "head" : {
-    "vars" : [ "series", "title", "acronym", "officialWebsite", "instanceOf", "dblpVenueId", "wikiCfpSeriesId" ]
+    "vars" : [ "series", "seriesLabel", "title", "acronym", "officialWebsite", "instanceOf", "dblpVenueId", "wikiCfpSeriesId" ]
   },
   "results" : {
     "bindings" : [ {
       "series" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699531"
+        "value" : "http://www.wikidata.org/entity/Q113625339"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Managing the Evolution and Preservation of the Data Web"
       },
       "title" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "European Workshop on Human-Computer Interaction and Information Retrieval"
+        "value" : "Workshop on Managing the Evolution and Preservation of the Data Web"
       },
       "acronym" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "EuroHCIR"
+        "value" : "MEPDaW"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700701"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Evaluation of Ontology-based Tools"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Evaluation of Ontology-based Tools"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EON"
       },
       "instanceOf" : {
         "type" : "literal",
@@ -24,108 +53,17 @@
       },
       "dblpVenueId" : {
         "type" : "literal",
-        "value" : "conf/eurohcir"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696159"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Neural-Symbolic Learning and Reasoning"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "NeSy"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/nesy"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://www.neural-symbolic.org/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699749"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Computational Linguistics and Intelligent Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "COLINS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/colins"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699022"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop From Objects to Agents"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "WOA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/woa"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700233"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Information Management for Mobile Applications"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "IMMoA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/immoa"
+        "value" : "conf/eon"
       }
     }, {
       "series" : {
         "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q105700238"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Knowledge Discovery on the Web"
       },
       "title" : {
         "xml:lang" : "en",
@@ -148,887 +86,12 @@
     }, {
       "series" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698848"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Artificial Intelligence and Cognition"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "AIC"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/aic"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113505627"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113583722"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699279"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "AWPN"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/awpn"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700023"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Configuration Workshop"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/confws"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700362"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Interop-Vlab.It Workshop on Pervasive Computing for Networked Enterprises"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "INVIT"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/invit"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698459"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Modular Ontologies"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "WoMO"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/womo"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "3128"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698581"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Design and Management of Data Warehouses"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "DMDW"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/dmdw"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q67006766"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Joint Ontology Workshops"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "JOWO"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/jowo"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "https://www.iaoa.org/jowo/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q117087609"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Knowledge Graph Construction"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "KGCW"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698911"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Italian Conference on Cybersecurity"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ITASEC"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/itasec"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698439"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Biomedical Ontology"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICBO"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/icbo"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1293"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q117035101"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Conference on Digital Curation Technologies"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Qurator"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698853"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Control, Optimisation and Analytical Processing of Social Networks"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "COAPSN"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/coapsn"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105491258"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Linked Data on the Web"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "LDOW"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://events.linkeddata.org"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700260"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Online Dispute Resolution"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ODR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/odr"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700291"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Semantic Web Technologies"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "IWSW"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/iwsw"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700367"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Italian Conference on Computational Linguistics"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CLiC-it"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/clic-it"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105697933"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "BCS-IRSG Symposium on Future Directions in Information Access"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "FDIA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/fdia"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700376"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Joint Seminar on Ontology Research in Brazil / International Workshop on Metamodels, Ontologies and Semantic Technologies"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ONTOBRAS-MOST"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ontobras"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700408"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Latin-American Workshop on Non-Monotonic Reasoning"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "LA-NMR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/lanmr"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700606"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Symposium on Information Management and Big Data"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SIMBig"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/simbig"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698448"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Semantic Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SEMANTICS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/i-semantics"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1705"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698878"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Requirements Engineering and Testing"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "RET"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ret"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113625339"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Managing the Evolution and Preservation of the Data Web"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "MEPDaW"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113625473"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Enterprise Modeling and Information Systems Architectures"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "EMISA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105695719"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference of the Italian Association for Artificial Intelligence"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "AI*IA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/aiia"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "106"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698979"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Scientific-practical Workshop Information Technologies: Algorithms, Models, Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ITAMS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/itams"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696273"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Quality of Information and Communications Technology"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "QUATIC"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/quatic"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q107011859"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "WOP"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698374"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Annual Conference of the Spanish Society for Natural Language Processing"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SEPLN"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/sepln"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699048"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Making Sense of Microposts"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "#Microposts"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/msm"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700664"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Affective Computing and Context Awareness in Ambient Intelligence"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "AfCAI"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/afcai"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700662"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Advanced Learning Technologies for Disabled and Non-Disabled People"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "WALTD"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/waltd"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q106429025"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "https://wikidataworkshop.github.io/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700184"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Computer Modeling and Intelligent Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CMIS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/cmis"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113646253"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CURAC"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "https://www.curac.org/en/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699482"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Databases, Texts, Specifications, Objects"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "DATESO"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/dateso"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700160"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Bibliometric-enhanced Information Retrieval"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "BIR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/birws"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113646198"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Bridging the Gap between Human and Automated Reasoning"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696184"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Italian Conference on Theoretical Computer Science"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICTCS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ictcs"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1489"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q56846035"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Semantic Web Applications and Tools for Healthcare and Life Sciences"
       },
       "title" : {
         "xml:lang" : "en",
@@ -1055,850 +118,40 @@
     }, {
       "series" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699194"
+        "value" : "http://www.wikidata.org/entity/Q113646253"
       },
-      "title" : {
+      "seriesLabel" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "European Conference on Multi-Agent Systems"
+        "value" : "CURAC (Computer- und Roboterassistierte Chirurgie) Annual Meeting"
       },
       "acronym" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "EUMAS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/eumas"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "948"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699451"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Conference on Theory and Practice of Information Technologies"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ITAT"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/itat"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699855"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Information and Communication Technologies for Sustainable Agri-production and Environment"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "HAICTA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/haicta"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699608"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICT for Sustainability"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICT4S"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ict4s"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://ict4s.org/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698522"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Answer Set Programming"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ASP"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/asp"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699355"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Canadian Semantic Web Symposium"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CSWS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/csws"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699611"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "INCOSE Italia Conference on Systems Engineering"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CIISE"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ciise"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700701"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Evaluation of Ontology-based Tools"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "EON"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/eon"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700186"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Concurrency, Specification and Programming"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CS&P"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/csp"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700301"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Software Ecosystems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "IWSECO"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/iwseco"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698901"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Very Large Data Search"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "VLDS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/vlds"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q69112203"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "LWDA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/lwa"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699930"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Random and Exhaustive Generation of Combinatorial Structures"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "GASCom"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/gascom"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700235"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Information-Communication Technologies & Embedded Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICTES"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ictes"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700378"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Joint Workshop on Bibliometric-enhanced Information Retrieval and Natural Language Processing for Digital Libraries"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "BIRNDL"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/birndl"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698865"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Information, Computation, and Control Systems for Distributed Environments"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICCS-DE"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/iccs-de"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700341"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Verification and Evaluation of Computer and Communication Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "VECoS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/vecos"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113623432"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Linguistic and Cognitive Approaches To Dialog Agents"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "LaCATODA"
+        "value" : "CURAC"
       },
       "instanceOf" : {
         "type" : "literal",
         "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700597"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Swiss Text Analytics Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SwissText"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/swisstext"
       },
       "officialWebsite" : {
         "type" : "uri",
-        "value" : "https://www.swisstext.org/"
+        "value" : "https://www.curac.org/en/"
       }
     }, {
       "series" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699020"
+        "value" : "http://www.wikidata.org/entity/Q83793592"
       },
-      "title" : {
+      "seriesLabel" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Workshop Business Intelligence"
+        "value" : "Workshop on Deep Learning for Knowledge Graphs"
       },
       "acronym" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "WSBI"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/wsbi"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699422"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Conference on Enterprise Information Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "EIS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/eis"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699023"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop Föderierte Datenbanken"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "FDBS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/fdbs"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700487"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Open Knowledge Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "OKCon"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/okcon"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699827"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on ICT Solutions for Justice"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICT4Justice"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ict4justice"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700560"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Seminar on Advanced Techniques and Tools for Software Evolution"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SATToSE"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/sattose"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698986"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "SEUH"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/seuh"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698882"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Science Gateways"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/iwsg"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699579"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Geospatial Science Research Symposium"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "GSR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/gsr"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696269"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Practical Aspects of Knowledge Management"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "PAKM"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/pakm"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700468"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "NTCIR Conference on Evaluation of Information Access Technologies"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "NTCIR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ntcir"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q59829280"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Description Logics"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "DL"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/dlog"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://dl.kr.org/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698908"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International i* Workshop"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "iStar"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/istar"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699341"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Brazilian Symposium in Information and Human Language Technology"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "STIL"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/stil"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://aclanthology.info/venues/stil"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700716"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Knowledge Representation and Automated Reasoning"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "RCRA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/rcra"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://rcra.aixia.it/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699491"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Digital Humanities in the Nordic Countries Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "DHNB"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/dhn"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700679"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Computational Creativity, Concept Invention, and General Intelligence"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "C3GI"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/c3gi"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113625374"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Linked Data Quality"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "LDQ"
+        "value" : "DL4KG"
       },
       "instanceOf" : {
         "type" : "literal",
@@ -1907,17 +160,22 @@
     }, {
       "series" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700685"
+        "value" : "http://www.wikidata.org/entity/Q105700367"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Conference on Computational Linguistics"
       },
       "title" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "Workshop on Context-Aware Adaptation of Service Front-Ends"
+        "value" : "Italian Conference on Computational Linguistics"
       },
       "acronym" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "CASFE"
+        "value" : "CLiC-it"
       },
       "instanceOf" : {
         "type" : "literal",
@@ -1925,35 +183,17 @@
       },
       "dblpVenueId" : {
         "type" : "literal",
-        "value" : "conf/casfe"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700735"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Ontologies and Data in Life Sciences"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ODLS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/odls"
+        "value" : "conf/clic-it"
       }
     }, {
       "series" : {
         "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q105695450"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Central-European Workshop on Services and their Composition"
       },
       "title" : {
         "xml:lang" : "en",
@@ -1980,918 +220,12 @@
     }, {
       "series" : {
         "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700680"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Computational History"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "HistoInformatics"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/histoinfo"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q6053150"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Semantic Web Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ISWC"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/semweb"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://swsa.semanticweb.org/content/international-semantic-web-conference-iswc"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1769"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105693562"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Italian Research Conference on Digital Library Management Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "IRCDL"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ircdl"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1655"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105695454"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Collaborative European Research Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CERC"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/cerc"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113646207"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Joint Workshop on Interfaces and Human Decision Making for Recommender Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "IntRS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q116982161"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Workshop on Knowledge Graph Generation From Text"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Text2KG"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q106244696"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Intelligent Computer Mathematics - 9th International Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CICM 2016"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q2020153"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700656"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "GvD"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/gvd"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698552"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Combining and Uniting Business Intelligence with Semantic Technologies Workshop"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CUBIST"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/cubist"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://www.cubist-project.eu/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699410"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Conference of the Association Information and Management"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "AIM"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/aim"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700351"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on the Semantic Web"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SemWeb"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/sww"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105701738"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Embed With Linux Workshop"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "EWiLi"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/ewili"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105693467"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Joint International Conference of Semantic Technology"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "JIST"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/jist"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q59916981"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SEMANTiCS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q15900647"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "https://semantics.cc/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696294"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Semantic Web Applications and Perspectives"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SWAP"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/swap"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699413"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Conference of the Spanish Association for Videogames Sciences"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CoSECivi"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/cosecivi"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://secivi.org/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105695731"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Advanced Aspects of Software Engineering"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICAASE"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/icaase"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698816"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Symposium on Data-Driven Process Discovery and Analysis"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SIMPDA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/simpda"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696796"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Latin American Computing Conference / Conferencia Latinoamericana En Informatica"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CLEI"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/clei"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699019"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "ABP"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/abp"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700161"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Bidirectional Transformations"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Bx"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/bx"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105695983"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Recent Trends and Applications in Computer Science and Information Technology"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "RTA-CSIT"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/rtacsit"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698444"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Information and Communication Technologies in Education, Research, and Industrial Applications"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICTERI"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/icteri"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://www.icteri.org/"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1492"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105693462"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Workshop on Data Warehousing and OLAP"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "DOLAP"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/dolap"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "748"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699514"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "EMISA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/emisa"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699563"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Forum Media Technology"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/fmt"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699509"
-      },
-      "acronym" : {
-        "xml:lang" : "es",
-        "type" : "literal",
-        "value" : "EIG"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/eig"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700575"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Software Quality Analysis, Monitoring, Improvement, and Applications"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/sqamia"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105700559"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Semantic Technologies for Intelligence, Defense, and Security"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "STIDS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/stids"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698547"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Chinese Conference on Logic and Argumentation"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CLAR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/clar"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698924"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Knowledge Representation Meets Databases"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "KRDB"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/krdb"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699582"
-      },
-      "acronym" : {
-        "xml:lang" : "de",
-        "type" : "literal",
-        "value" : "EPK"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/epk"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105699460"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Congress on Robotics and Neuroscience"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CRoNe"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/crone"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696657"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Concept Lattices and their Applications"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "CLA"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/cla"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://cla.inf.upol.cz/"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "488"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698650"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Interdisciplinary Workshop The Shape of Things"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SHAPES"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/shapes"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105698626"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "GamiFIN Conference"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "GamiFIN"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/gamifin"
-      },
-      "officialWebsite" : {
-        "type" : "uri",
-        "value" : "http://gamifinconference.com/"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696323"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Symposium on Small Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SIGSMALL"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/sigsmall"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696021"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "International Conference on Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "ICONS"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/icons"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1439"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q83793592"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "DL4KG"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q105696185"
-      },
-      "title" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "Italian Information Retrieval Workshop"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "IIR"
-      },
-      "instanceOf" : {
-        "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
-      },
-      "dblpVenueId" : {
-        "type" : "literal",
-        "value" : "conf/iir"
-      },
-      "wikiCfpSeriesId" : {
-        "type" : "literal",
-        "value" : "1562"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q105696183"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Conference on Computational Logic"
       },
       "title" : {
         "xml:lang" : "en",
@@ -2918,7 +252,652 @@
     }, {
       "series" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106429025"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Wikidata Workshop"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "https://wikidataworkshop.github.io/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700184"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Computer Modeling and Intelligent Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Computer Modeling and Intelligent Systems"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CMIS"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/cmis"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700487"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Open Knowledge Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Open Knowledge Conference"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "OKCon"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/okcon"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117087609"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop On Knowledge Graph Construction"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Knowledge Graph Construction"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "KGCW"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699582"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geschäftsprozessmanagement mit Ereignisgesteuerten Prozessketten"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "EPK"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/epk"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698439"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Biomedical Ontology"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Biomedical Ontology"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICBO"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/icbo"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1293"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696323"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Symposium on Small Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Symposium on Small Systems"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SIGSMALL"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/sigsmall"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q27230297"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CEUR Workshop Proceedings"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CEUR workshop proceedings"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CEUR-WS"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q1002697 http://www.wikidata.org/entity/Q1235234 http://www.wikidata.org/entity/Q2217301 http://www.wikidata.org/entity/Q27785883"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "series/ceurws"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://ceur-ws.org/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699019"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop Automatische Bewertung von Programmieraufgaben"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "ABP"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/abp"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700680"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Computational History"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Computational History"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "HistoInformatics"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/histoinfo"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113512475"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Modular Knowledge"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "MK"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700235"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Information-Communication Technologies & Embedded Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Information-Communication Technologies & Embedded Systems"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICTES"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ictes"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700301"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Software Ecosystems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Software Ecosystems"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "IWSECO"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/iwseco"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699482"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Databases, Texts, Specifications, Objects"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Databases, Texts, Specifications, Objects"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "DATESO"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/dateso"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700376"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Seminar on Ontology Research in Brazil / International Workshop on Metamodels, Ontologies and Semantic Technologies"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Seminar on Ontology Research in Brazil / International Workshop on Metamodels, Ontologies and Semantic Technologies"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ONTOBRAS-MOST"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ontobras"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105693562"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Research Conference on Digital Library Management Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Research Conference on Digital Library Management Systems"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "IRCDL"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ircdl"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1655"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698848"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Artificial Intelligence and Cognition"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Artificial Intelligence and Cognition"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "AIC"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/aic"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699279"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Algorithmen und Werkzeuge für Petrinetze"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "AWPN"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/awpn"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699531"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Workshop on Human-Computer Interaction and Information Retrieval"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Workshop on Human-Computer Interaction and Information Retrieval"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EuroHCIR"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/eurohcir"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696269"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Practical Aspects of Knowledge Management"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Practical Aspects of Knowledge Management"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "PAKM"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/pakm"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698448"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Semantic Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Semantic Systems"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SEMANTICS"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/i-semantics"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1705"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699514"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Entwicklungsmethoden für Informationssysteme und deren Anwendung: Fachtagung"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "EMISA"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/emisa"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699509"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Encuentro Informática y Gestión"
+      },
+      "acronym" : {
+        "xml:lang" : "es",
+        "type" : "literal",
+        "value" : "EIG"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/eig"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700559"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Semantic Technologies for Intelligence, Defense, and Security"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Semantic Technologies for Intelligence, Defense, and Security"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "STIDS"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/stids"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q105699329"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "BElgian-NEtherlands software eVOLution symposium"
       },
       "title" : {
         "xml:lang" : "en",
@@ -2941,17 +920,571 @@
     }, {
       "series" : {
         "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699563"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Forum Media Technology"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Forum Media Technology"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/fmt"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699579"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geospatial Science Research Symposium"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Geospatial Science Research Symposium"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/gsr"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "GSR"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700468"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NTCIR Conference on Evaluation of Information Access Technologies"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NTCIR Conference on Evaluation of Information Access Technologies"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ntcir"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NTCIR"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699341"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Brazilian Symposium in Information and Human Language Technology"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Brazilian Symposium in Information and Human Language Technology"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/stil"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "STIL"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://aclanthology.info/venues/stil"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696796"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Latin American Computing Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Latin American Computing Conference / Conferencia Latinoamericana En Informatica"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/clei"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CLEI"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700679"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Computational Creativity, Concept Invention, and General Intelligence"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Computational Creativity, Concept Invention, and General Intelligence"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/c3gi"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "C3GI"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696184"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Conference on Theoretical Computer Science"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Conference on Theoretical Computer Science"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ictcs"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICTCS"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1489"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700685"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Context-Aware Adaptation of Service Front-Ends"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Context-Aware Adaptation of Service Front-Ends"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/casfe"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CASFE"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700260"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Online Dispute Resolution"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Online Dispute Resolution"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/odr"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ODR"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105695454"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Collaborative European Research Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Collaborative European Research Conference"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/cerc"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CERC"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698374"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Annual Conference of the Spanish Society for Natural Language Processing"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Annual Conference of the Spanish Society for Natural Language Processing"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/sepln"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SEPLN"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700186"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Concurrency, Specification and Programming"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Concurrency, Specification and Programming"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/csp"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CS&P"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113646207"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Workshop on Interfaces and Human Decision Making for Recommender Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Workshop on Interfaces and Human Decision Making for Recommender Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "IntRS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105693467"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint International Conference of Semantic Technology"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint International Conference of Semantic Technology"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/jist"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "JIST"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700023"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Configuration Workshop"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Configuration Workshop"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/confws"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700160"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Bibliometric-enhanced Information Retrieval"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Bibliometric-enhanced Information Retrieval"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/birws"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "BIR"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105695983"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Recent Trends and Applications in Computer Science and Information Technology"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Recent Trends and Applications in Computer Science and Information Technology"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/rtacsit"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "RTA-CSIT"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698522"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Answer Set Programming"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Answer Set Programming"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/asp"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ASP"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699460"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Congress on Robotics and Neuroscience"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Congress on Robotics and Neuroscience"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/crone"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CRoNe"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699491"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Humanities in the Nordic and Baltic Countries Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Digital Humanities in the Nordic Countries Conference"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/dhn"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "DHNB"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q105696315"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Spring Young Researchers Colloquium on Databases and Information Systems"
       },
       "title" : {
         "xml:lang" : "en",
         "type" : "literal",
         "value" : "Spring Young Researchers Colloquium on Databases and Information Systems"
-      },
-      "acronym" : {
-        "xml:lang" : "en",
-        "type" : "literal",
-        "value" : "SYRCoDIS"
       },
       "instanceOf" : {
         "type" : "literal",
@@ -2960,35 +1493,839 @@
       "dblpVenueId" : {
         "type" : "literal",
         "value" : "conf/syrcodis"
-      }
-    }, {
-      "series" : {
-        "type" : "uri",
-        "value" : "http://www.wikidata.org/entity/Q113512475"
       },
       "acronym" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "MK"
+        "value" : "SYRCoDIS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699048"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Making Sense of Microposts"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Making Sense of Microposts"
       },
       "instanceOf" : {
         "type" : "literal",
-        "value" : "http://www.wikidata.org/entity/Q47459256"
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/msm"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "#Microposts"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699413"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference of the Spanish Association for Videogames Sciences"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference of the Spanish Association for Videogames Sciences"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/cosecivi"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CoSECivi"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://secivi.org/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699020"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop Business Intelligence"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop Business Intelligence"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/wsbi"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "WSBI"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700662"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Advanced Learning Technologies for Disabled and Non-Disabled People"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Advanced Learning Technologies for Disabled and Non-Disabled People"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/waltd"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "WALTD"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700408"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Latin-American Workshop on Non-Monotonic Reasoning"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Latin-American Workshop on Non-Monotonic Reasoning"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/lanmr"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "LA-NMR"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700716"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Knowledge Representation and Automated Reasoning"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Knowledge Representation and Automated Reasoning"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/rcra"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "RCRA"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://rcra.aixia.it/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q107011859"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Ontology Design and Patterns"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "WOP"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696185"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Information Retrieval Workshop"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Information Retrieval Workshop"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/iir"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "IIR"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1562"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700664"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Affective Computing and Context Awareness in Ambient Intelligence"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Affective Computing and Context Awareness in Ambient Intelligence"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/afcai"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "AfCAI"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q67006766"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "The Joint Ontology Workshops"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Ontology Workshops"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/jowo"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "JOWO"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "https://www.iaoa.org/jowo/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q117035101"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference on Digital Curation Technologies"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference on Digital Curation Technologies"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Qurator"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700575"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Software Quality Analysis, Monitoring, Improvement, and Applications"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Software Quality Analysis, Monitoring, Improvement, and Applications"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/sqamia"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113505627"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Semantic Publishing"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105697933"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "BCS-IRSG Symposium on Future Directions in Information Access"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "BCS-IRSG Symposium on Future Directions in Information Access"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/fdia"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "FDIA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700291"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Semantic Web Technologies"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Semantic Web Technologies"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/iwsw"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "IWSW"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113583722"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Ontology Modularity, Contextuality, and Evolution"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700597"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Swiss Text Analytics Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Swiss Text Analytics Conference"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/swisstext"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SwissText"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "https://www.swisstext.org/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698979"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Scientific-practical Workshop Information Technologies: Algorithms, Models, Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Scientific-practical Workshop Information Technologies: Algorithms, Models, Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/itams"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ITAMS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113625374"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Linked Data Quality"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Linked Data Quality"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "LDQ"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700351"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on the Semantic Web"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on the Semantic Web"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/sww"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SemWeb"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q69112203"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Lernen, Wissen, Daten, Analysen"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/lwa"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "LWDA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698924"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Knowledge Representation Meets Databases"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Knowledge Representation Meets Databases"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/krdb"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "KRDB"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696021"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/icons"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICONS"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1439"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698547"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Chinese Conference on Logic and Argumentation"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Chinese Conference on Logic and Argumentation"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/clar"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CLAR"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698878"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Requirements Engineering and Testing"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Requirements Engineering and Testing"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ret"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "RET"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q106244696"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Intelligent Computer Mathematics - 9th International Conference, CICM 2016, Bialystok, Poland, July 25-29, 2016"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Intelligent Computer Mathematics - 9th International Conference"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q2020153"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CICM 2016"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698816"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Symposium on Data-Driven Process Discovery and Analysis"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Symposium on Data-Driven Process Discovery and Analysis"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/simpda"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SIMPDA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700161"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Bidirectional Transformations"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Bidirectional Transformations"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/bx"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Bx"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699451"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference on Theory and Practice of Information Technologies"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference on Theory and Practice of Information Technologies"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/itat"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ITAT"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q6053150"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Semantic Web Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Semantic Web Conference"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/semweb"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ISWC"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://swsa.semanticweb.org/content/international-semantic-web-conference-iswc"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1769"
       }
     }, {
       "series" : {
         "type" : "uri",
         "value" : "http://www.wikidata.org/entity/Q105696724"
       },
-      "title" : {
+      "seriesLabel" : {
         "xml:lang" : "en",
         "type" : "literal",
         "value" : "International Symposium for Semantic Mining in Biomedicine"
       },
-      "acronym" : {
+      "title" : {
         "xml:lang" : "en",
         "type" : "literal",
-        "value" : "SMBM"
+        "value" : "International Symposium for Semantic Mining in Biomedicine"
       },
       "instanceOf" : {
         "type" : "literal",
@@ -2997,6 +2334,1366 @@
       "dblpVenueId" : {
         "type" : "literal",
         "value" : "conf/smbm"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SMBM"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698626"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "GamiFIN Conference"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "GamiFIN Conference"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/gamifin"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "GamiFIN"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://gamifinconference.com/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q59916981"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SEMANTiCS"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SEMANTiCS"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q15900647"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "https://semantics.cc/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699608"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICT for Sustainability"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICT for Sustainability"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ict4s"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICT4S"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://ict4s.org/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699855"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Information and Communication Technologies for Sustainable Agri-production and Environment"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Information and Communication Technologies for Sustainable Agri-production and Environment"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/haicta"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "HAICTA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699410"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference of the Association Information and Management"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference of the Association Information and Management"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/aim"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "AIM"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q59829280"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Description Logics"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Description Logics"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/dlog"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "DL"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://dl.kr.org/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700656"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop Grundlagen von Datenbanken"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/gvd"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "GvD"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699827"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on ICT Solutions for Justice"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on ICT Solutions for Justice"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ict4justice"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICT4Justice"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700735"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Ontologies and Data in Life Sciences"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Ontologies and Data in Life Sciences"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/odls"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ODLS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696294"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Semantic Web Applications and Perspectives"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Semantic Web Applications and Perspectives"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/swap"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SWAP"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113623432"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Linguistic and Cognitive Approaches To Dialog Agents"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Linguistic and Cognitive Approaches To Dialog Agents"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "LaCATODA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699023"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop Föderierte Datenbanken"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop Föderierte Datenbanken"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/fdbs"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "FDBS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699355"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Canadian Semantic Web Symposium"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Canadian Semantic Web Symposium"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/csws"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CSWS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699194"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Conference on Multi-Agent Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "European Conference on Multi-Agent Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/eumas"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EUMAS"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "948"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700378"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Workshop on Bibliometric-enhanced Information Retrieval and Natural Language Processing for Digital Libraries"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Joint Workshop on Bibliometric-enhanced Information Retrieval and Natural Language Processing for Digital Libraries"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/birndl"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "BIRNDL"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113646198"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Bridging the Gap between Human and Automated Reasoning"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Bridging the Gap between Human and Automated Reasoning"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698650"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Interdisciplinary Workshop The Shape of Things"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Interdisciplinary Workshop The Shape of Things"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/shapes"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SHAPES"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698552"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Combining and Uniting Business Intelligence with Semantic Technologies Workshop"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Combining and Uniting Business Intelligence with Semantic Technologies Workshop"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/cubist"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CUBIST"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://www.cubist-project.eu/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700560"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Seminar on Advanced Techniques and Tools for Software Evolution"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Seminar on Advanced Techniques and Tools for Software Evolution"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/sattose"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SATToSE"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699611"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "INCOSE Italia Conference on Systems Engineering"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "INCOSE Italia Conference on Systems Engineering"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ciise"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CIISE"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105693462"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Data Warehousing and OLAP"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Data Warehousing and OLAP"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/dolap"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "DOLAP"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "748"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698581"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Design and Management of Data Warehouses"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Design and Management of Data Warehouses"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/dmdw"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "DMDW"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699422"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference on Enterprise Information Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Conference on Enterprise Information Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/eis"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EIS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700362"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Interop-Vlab.It Workshop on Pervasive Computing for Networked Enterprises"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Interop-Vlab.It Workshop on Pervasive Computing for Networked Enterprises"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/invit"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "INVIT"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q116982161"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Knowledge Graph Generation From Text"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Knowledge Graph Generation From Text"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Text2KG"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698882"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Science Gateways"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Science Gateways"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/iwsg"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105491258"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Linked Data on the Web"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop on Linked Data on the Web"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "LDOW"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://events.linkeddata.org"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698865"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Information, Computation, and Control Systems for Distributed Environments"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Information, Computation, and Control Systems for Distributed Environments"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/iccs-de"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICCS-DE"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105701738"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Embed With Linux Workshop"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Embed With Linux Workshop"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/ewili"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EWiLi"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698911"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Conference on Cybersecurity"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Italian Conference on Cybersecurity"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/itasec"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ITASEC"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698901"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Very Large Data Search"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Very Large Data Search"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/vlds"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "VLDS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699749"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Computational Linguistics and Intelligent Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Computational Linguistics and Intelligent Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/colins"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "COLINS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698444"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Information and Communication Technologies in Education, Research, and Industrial Applications"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Information and Communication Technologies in Education, Research, and Industrial Applications"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/icteri"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICTERI"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://www.icteri.org/"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "1492"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105695731"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Advanced Aspects of Software Engineering"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Advanced Aspects of Software Engineering"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/icaase"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "ICAASE"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698986"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Software Engineering im Unterricht der Hochschulen"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/seuh"
+      },
+      "acronym" : {
+        "xml:lang" : "de",
+        "type" : "literal",
+        "value" : "SEUH"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700341"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Verification and Evaluation of Computer and Communication Systems"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Verification and Evaluation of Computer and Communication Systems"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/vecos"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "VECoS"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105695719"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference of the Italian Association for Artificial Intelligence"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference of the Italian Association for Artificial Intelligence"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/aiia"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "AI*IA"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "106"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696273"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Quality of Information and Communications Technology"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Quality of Information and Communications Technology"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/quatic"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "QUATIC"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699930"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Random and Exhaustive Generation of Combinatorial Structures"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Random and Exhaustive Generation of Combinatorial Structures"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/gascom"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "GASCom"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696159"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Neural-Symbolic Learning and Reasoning"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Neural-Symbolic Learning and Reasoning"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/nesy"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "NeSy"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://www.neural-symbolic.org/"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698853"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Control, Optimisation and Analytical Processing of Social Networks"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Control, Optimisation and Analytical Processing of Social Networks"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/coapsn"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "COAPSN"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698459"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Modular Ontologies"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Modular Ontologies"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/womo"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "WoMO"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "3128"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105696657"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Concept Lattices and their Applications"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Conference on Concept Lattices and their Applications"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/cla"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "CLA"
+      },
+      "officialWebsite" : {
+        "type" : "uri",
+        "value" : "http://cla.inf.upol.cz/"
+      },
+      "wikiCfpSeriesId" : {
+        "type" : "literal",
+        "value" : "488"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105699022"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop From Objects to Agents"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Workshop From Objects to Agents"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/woa"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "WOA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105698908"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International i* Workshop"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International i* Workshop"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/istar"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "iStar"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700606"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Symposium on Information Management and Big Data"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "Symposium on Information Management and Big Data"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130 http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/simbig"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "SIMBig"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q105700233"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Information Management for Mobile Applications"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Information Management for Mobile Applications"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47258130"
+      },
+      "dblpVenueId" : {
+        "type" : "literal",
+        "value" : "conf/immoa"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "IMMoA"
+      }
+    }, {
+      "series" : {
+        "type" : "uri",
+        "value" : "http://www.wikidata.org/entity/Q113625473"
+      },
+      "seriesLabel" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Enterprise Modeling and Information Systems Architectures"
+      },
+      "title" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "International Workshop on Enterprise Modeling and Information Systems Architectures"
+      },
+      "instanceOf" : {
+        "type" : "literal",
+        "value" : "http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256 http://www.wikidata.org/entity/Q47459256"
+      },
+      "acronym" : {
+        "xml:lang" : "en",
+        "type" : "literal",
+        "value" : "EMISA"
       }
     } ]
   }
