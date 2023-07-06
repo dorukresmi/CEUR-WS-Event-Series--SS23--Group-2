@@ -1,0 +1,159 @@
+import json
+from importlib import resources
+
+import nltk
+import pandas as pd
+from nltk.corpus import stopwords
+from nltk import ngrams
+from nltk.metrics.distance import jaccard_distance
+
+
+class NgramMatch:
+    def __init__(self, matches_df: pd.DataFrame) -> None:
+        matches_df.dropna(inplace=True)
+        self.matches_df = matches_df
+        self.stop_words = set(stopwords.words('english'))
+        self.event_titles = self.remove_stopwords(matches_df["event"].tolist())
+        self.matches_df["event"] = self.event_titles
+        self.series_titles = self.remove_stopwords(matches_df["event_series"].tolist())
+        self.matches_df["event_series"] = self.series_titles
+        self.series_distinct = []
+        self.n_grams = [3, 4, 5]
+        self.threshold_values = [1, 0.9, 0.8, 0.7, 0.6, 0.5]
+        self.best_threshold = 0
+        self.best_n = 0
+
+    def matcher(self):
+        max_f1_score = 0
+        max_matches = 0
+        best_precision = 0
+        best_recall = 0
+        best_n_gram = 0
+        best_threshold = 0
+
+        for i in self.n_grams:
+            n = i  # Number of words in each n-gram
+            for j in self.threshold_values:
+                threshold = j  # Minimum required similarity for a partial match
+                true_positives = 0
+                false_positives = 0
+                false_negatives = 0
+                partially_matched_events = []
+                for event in self.event_titles:
+                    # We need this dict because there can be a many-to-many mapping between event and event series
+                    matched_events_dict = {}
+                    matched_series = ""
+                    event_ngrams = set(ngrams(event.split(), n))
+                    for series in self.series_titles:
+                        series_ngrams = set(ngrams(series.split(), n))
+                        '''There can be cases that series or events don't have 3 words'''
+                        similarity = 0
+                        if len(event_ngrams.union(series_ngrams)) > 0:
+                            similarity = 1 - jaccard_distance(event_ngrams, series_ngrams)
+
+                        if ((similarity >= threshold) and (event in matched_events_dict and similarity >
+                                                           matched_events_dict[event])) or (
+                                event not in matched_events_dict
+                                and similarity >= threshold):
+                            matched_events_dict[event] = similarity
+                            matched_series = series
+
+                    #             print("Partial match found:")
+                    #             print(f"#####MATCHED_EVENT#####{event}")
+                    #             print(f"######MATCHED_SERIES######{matched_series}")
+                    #             print()
+                    if (
+                            self.matches_df.loc[self.matches_df['event'] == event, 'event_series'].values[
+                                0]) == matched_series:
+                        true_positives += 1
+                    elif matched_series == "":
+                        # We consider all the events that did not give out a match as the false negative set.
+                        false_negatives += 1
+                    else:
+                        false_positives += 1
+
+                    if series not in self.series_distinct:
+                        self.series_distinct.append(series)
+                    #             print()
+                    partially_matched_events.append(event)
+
+                # print(f"Statistics for {n}-grams and threshold:{threshold}->")
+                # print()
+                # print("true positives: ", true_positives)
+                # print("false positives: ", false_positives)
+                # print("false negatives: ", false_negatives)
+                precision = true_positives / (true_positives + false_positives)
+                # print("Precision: ", precision)
+                recall = true_positives / (true_positives + false_negatives)
+                # print("Recall: ", recall)
+                f1_score = 2 * (precision * recall) / (precision + recall)
+                if f1_score > max_f1_score:
+                    best_precision = precision
+                    best_recall = recall
+                    max_f1_score = f1_score
+                    max_matches = len(partially_matched_events)
+                    best_n_gram = n
+                    best_threshold = threshold
+                # print("F1-Score: ", f1_score)
+                # print("Number of partial matches: ", len(partially_matched_events))
+                # print()
+
+        print("Best Choice for n-grams: ")
+        print(f"Statistics for {best_n_gram}-grams and threshold: {best_threshold}->")
+        print("Precision: ", best_precision)
+        print("Recall: ", best_recall)
+        print("F1-Score: ", max_f1_score)
+        # print("Maximum number of partial matches: ", max_matches)
+        self.best_n = best_n_gram
+        self.best_threshold = best_threshold
+
+    def wikidata_match(self, existing_matches):
+        partially_matched_events = []
+        events_file = resources.files('eventseries.resources') / "events_without_matches.json"
+        series_file = resources.files('eventseries.resources') / "event_series.json"
+        events = json.load(events_file.open('r'))
+        event_titles = [item['title'] for item in events if 'title' in item]
+        event_titles = [event for event in event_titles if event not in existing_matches]
+        series = json.load(series_file.open('r'))
+        series_titles = [item["title"]["value"] for item in series["results"]["bindings"] if "title" in item]
+
+        for event in event_titles:
+            matched_events_dict = {}
+            matched_series = ""
+            event_ngrams = set(ngrams(event.split(), self.best_n))
+            for series in series_titles:
+                series_ngrams = set(ngrams(series.split(), self.best_n))
+                '''There can be cases that series or events don't have 3 words'''
+                if len(event_ngrams.union(series_ngrams)) > 0:
+                    similarity = 1 - jaccard_distance(event_ngrams, series_ngrams)
+
+                if ((similarity >= self.best_threshold) and (event in matched_events_dict and similarity >
+                                                             matched_events_dict[event])) or (
+                        event not in matched_events_dict
+                        and similarity >= self.best_threshold):
+                    matched_events_dict[event] = similarity
+                    matched_series = series
+            # print("Partial match found:")
+            # print(f"#####EVENT#####{event}")
+            # print(f"######SERIES######{matched_series}")
+            #     if series not in series_distinct:
+            #         series_distinct.append(series)
+            # print()
+            if matched_series != "":
+                partially_matched_events.append(event)
+        print("Number of unique matches from n-grams in Wikidata: ", len(partially_matched_events))
+        return partially_matched_events
+
+    def remove_stopwords(self, text_list):
+        # Remove stopwords from each string in the list
+        filtered_list = []
+        for text in text_list:
+            # Tokenize the string into individual words
+            words = nltk.word_tokenize(text)
+            # Remove stopwords from the list of words
+            filtered_words = [word for word in words if word.lower() not in self.stop_words]
+            # Join the filtered words back into a string
+            filtered_text = ' '.join(filtered_words)
+            # Add the filtered string to the filtered list
+            filtered_list.append(filtered_text)
+        return filtered_list
