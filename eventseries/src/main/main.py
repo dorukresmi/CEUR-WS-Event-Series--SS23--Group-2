@@ -15,22 +15,23 @@ from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_WS_TI
 from eventseries.src.main.util.utility import Utility
 from eventseries.src.main.matcher.dblp_matcher import DblpMatcher
 from query.queried_events import Events
-from import2Neo4j import ImportData_temp
+from import2Neo4j import import_data
 
 if __name__ == '__main__':
-    importDataTemp = ImportData_temp.ImportData()
-    # importDataTemp.fetch_data_and_import()
-    # importDataTemp.import_data_to_neo4j(importDataTemp.new_func())
-    # importDataTemp.import_event_series_to_neo4j(importDataTemp.new_func_series())
-    # importDataTemp.counter_func()
-    importDataTemp.check_event_with_series(importDataTemp.new_func(),importDataTemp.new_func_series())
+    importData = import_data.ImportData()
+    # importData.fetch_data_and_import()
+    # importData.import_data_to_neo4j(importData.new_func())
+    # importData.import_event_series_to_neo4j(importData.new_func_series())
+    # importData.counter_func()
+    # importData.check_event_with_series(importData.new_func(),importData.new_func_series())
+    # importData.add_country(importData.new_func())
 
     '''Stored the queried events in resources/events.json '''
     events = Events()
     events.query()
     # Query Event series
     events.event_series_query()
-    # todo: Read the json directly using pyLODStorage
+    # # todo: Read the json directly using pyLODStorage
     records = events.read_as_dict()
     for record in records:
         Ordinal.addParsedOrdinal(record)
