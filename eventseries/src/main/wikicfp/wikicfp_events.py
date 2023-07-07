@@ -4,7 +4,7 @@ import pandas as pd
 
 
 def series_cfp_input():
-    df_series_wikicfp = pd.read_json('../resources/eventseries_wikicfp.json')
+    df_series_wikicfp = pd.read_json('../resources/eventserise_wikicfp.json')
     return df_series_wikicfp
 
 def event_cfp_input():
@@ -18,50 +18,53 @@ def all_series_cfp_obj():
         dic = {"index": index, "series": series_cfp(ID=row['wikiCfpId'], title= row['title'], dblp=row['dblpSeriesId'])}
         df_l.append(dic)
     return df_l
-
-
 class series_cfp:
-    def __init__(self, ID, title=None, dblp=None):
+    def __init__(self,ID, title = None, dblp = None):
         self.ID = ID
         self.title = title
         self.dblp = dblp
-        self.df = series_cfp_input()
 
-    # 'dblpSeriesId', 'deleted', 'seriesId', 'title', 'url', 'wikiCfpId',
-    # 'source', 'eventSeriesId', 'acronym'],
+    #'dblpSeriesId', 'deleted', 'seriesId', 'title', 'url', 'wikiCfpId',
+   # 'source', 'eventSeriesId', 'acronym'],
+
 
     def get_dblp(self):
         if self.dblp == None:
 
-            self.dblp = self.df[self.df['seriesId'] == self.ID]['dblpSeriesId'].values
+            df = series_cfp_input()
+            self.dblp = df[df['seriesId'] == self.ID]['dblpSeriesId'].values
             return self.dblp
 
         else:
             return self.dblp
 
+
+
     def get_Title(self):
         if self.title == None:
 
-            self.title = self.df[self.df['seriesId'] == self.ID]['title'].values
+            df = series_cfp_input()
+            self.title = df[df['seriesId']==self.ID]['title'].values
             return self.title
 
         else:
             return self.title
 
     def get_acronym(self):
-
-        self.acronym = self.df[self.df['seriesId'] == self.ID]['acronym'].values
+        df = series_cfp_input()
+        self.acronym = df[df['seriesId']==self.ID]['acronym'].values
         return self.acronym
 
-    def get_url(self):
 
-        self.url = self.df[self.df['seriesId'] == self.ID]['url'].values
+    def get_url(self):
+        df = series_cfp_input()
+        self.url = df[df['seriesId']==self.ID]['url'].values
         return self.url
 
     def get_relativ_events(self):
-
+        df = event_cfp_input()
         events_l = []
-        df_event = self.df[self.df['seriesId'] == self.ID]
+        df_event= df[df['seriesId']==self.ID]
         for index, row in df_event.iterrows():
             events_l.append(event_cfp(ID=row['eventId'], title=row['title'], year=row['year']))
 
@@ -69,51 +72,53 @@ class series_cfp:
         return self.events
 
 
+
 class event_cfp:
-    def __init__(self, ID, title=None, year=None, seriesID=None, seriesTitle=None, location=None):
+    def __init__(self, ID, title = None, year = None, seriesID = None, seriesTitle = None, location = None):
         self.ID = ID
         self.title = title
         self.year = year
         self.seriesID = seriesID
         self.seriesTitlt = seriesTitle
         self.location = location
-        self.df = event_cfp_input()
+
+
 
     def get_location(self):
-
-        self.location = self.df[self.df['eventId'] == self.ID]['locality'].values
+        df = event_cfp_input()
+        self.location = df[df['eventId']==self.ID]['locality'].values
         return self.location
 
-    # 'Submission_Deadline', 'acronym', 'deleted', 'endDate', 'eventId',
+    #'Submission_Deadline', 'acronym', 'deleted', 'endDate', 'eventId',
     #   'eventType', 'locality', 'series', 'seriesId', 'startDate', 'title',
     #   'wikiCfpId', 'year', 'source', 'url', 'ordinal', 'city',
     #   'cityWikidataid', 'region', 'regionIso', 'regionWikidataid', 'country',
     #   'countryIso', 'countryWikidataid', 'lookupAcronym', 'Notification_Due',
     #   'Final_Version_Due'
     def get_acronym(self):
-
-        self.acronym = self.df[self.df['eventId'] == self.ID]['acronym'].values
+        df = event_cfp_input()
+        self.acronym = df[df['eventId']==self.ID]['acronym'].values
         return self.acronym
 
     def get_eventType(self):
-
-        self.eventType = self.df[self.df['eventId'] == self.ID]['eventType'].values
+        df = event_cfp_input()
+        self.eventType = df[df['eventId']==self.ID]['eventType'].values
         return self.eventType
 
     def get_url(self):
-
-        self.url = self.df[self.df['eventId'] == self.ID]['url'].values
+        df = event_cfp_input()
+        self.url = df[df['eventId']==self.ID]['url'].values
         return self.url
 
     def get_Title(self):
         if self.title == None:
 
-            self.title = self.df[self.df['eventId'] == self.ID]['title'].values
+            df = event_cfp_input()
+            self.title = df[df['eventId']==self.ID]['title'].values
             return self.title
 
         else:
             return self.title
-
-    def get_attr(self, attr):
-
-        return self.df[self.df['eventId'] == self.ID][attr].values
+    def get_attr(self,attr):
+        df = event_cfp_input()
+        return df[df['eventId']==self.ID][attr].values

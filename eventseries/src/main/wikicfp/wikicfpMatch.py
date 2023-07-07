@@ -134,6 +134,7 @@ def cfp_dblp_Link():
 
                 match = sameText(title_cfp[0], row['name'])
                 if match:
+
                     l_match.append(id)
             if len(l_match) > 0:
                 df_dblp.at[index, 'seriesIds_cfp'] = l_match
@@ -159,52 +160,13 @@ def cfp_dblp_Link():
         else:
             df_dblp.at[index, 'wikicfp_events'] = None
 
-    df_dblp.to_json('../resources/dblp_wikicfp.json', orient='records')
+    #df_dblp.to_json('../resources/dblp_wikicfp.json', orient='records')
 
     return df_dblp
 
+def save_cfp_dblp_Link():
+    cfp_dblp_Link().to_json('../resources/dblp_wikicfp.json', orient='records')
 
-def same_Location_Year():
-    df_events_cfp = pd.read_json('../resources/df_event_wikicfp_with_series.json')
-    df_events_wikidata = pd.read_json('../resources/wikidata_events.json')
-    df_events_wikidata = df_events_wikidata[
-        df_events_wikidata.startTime.notna() & df_events_wikidata.endTime.notna() & df_events_wikidata.country.notna()]
-    for index, row in df_events_wikidata.iterrows():
-        df_events_wikidata.at[index, 'year'] = row['startTime'][0:4]
-    df_events_wikidata['p_cfp_y_c'] = None
-    for index1, row1 in df_events_wikidata.iterrows():
-        l_year = df_events_cfp[df_events_cfp['year'] == float(row1['year'])]['eventId'].tolist()
 
-        l_country = df_events_cfp[
-            df_events_cfp['countryWikidataid'] == row1['country'].replace("http://www.wikidata.org/entity/", "")][
-            'eventId'].tolist()
-        same = list(set(l_year) & set(l_country))
 
-        if len(same) == 0:
-            df_events_wikidata.at[index1, 'p_cfp_y_c'] = None
-        else:
-            df_events_wikidata.at[index1, 'p_cfp_y_c'] = same
-    df_events_wikidata.to_json('../resources/wikidata_cfp_year_loc.json', orient='records')
-    return df_events_wikidata
 
-def events_dblp_cfp():
-    df_dblp_cfp = pd.read_json('../resources/dblp_wikicfp.json')
-    df_dblp_cfp_hold = df_dblp_cfp[df_dblp_cfp.seriesIds_cfp.notna() & df_dblp_cfp.wikicfp_events.notna()]
-    for index, row in df_dblp_cfp_hold.iterrows():
-        dict_l = []
-        for item in row['mentioned_events']:
-            for cfp in row['wikicfp_events']:
-                if item.get("year") == cfp.get("year"):
-                    item["CFPeventID"] = cfp.get("CFPeventID")
-                    item["CFPtitle"] = cfp.get("CFPtitle")
-                    break
-            dict_l.append(item)
-        df_dblp_cfp.at[index, 'mentioned_events'] = dict_l
-    df_dblp_cfp.to_json('../resources/dblp_wikicfp.json', orient='records')
-    dic_l = []
-    for item in df_dblp_cfp[df_dblp_cfp.seriesIds_cfp.notna() & df_dblp_cfp.wikicfp_events.notna()]['mentioned_events']:
-        for event in item:
-            dic_l.append(event)
-    data = pd.DataFrame(dic_l)
-    data[data.CFPeventID.notna()].to_json('../resources/events_dblp_cfp', orient='records')
-    return data[data.CFPeventID.notna()]
