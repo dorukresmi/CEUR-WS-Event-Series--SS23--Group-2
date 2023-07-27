@@ -12,6 +12,9 @@ class Event:
     location: Optional[str]
     ordinal: Optional[str]
 
+    def __hash__(self) -> int:
+        return hash(self.title)
+
 
 @dataclass
 class DblpEvent(Event):

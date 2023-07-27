@@ -16,7 +16,7 @@ class PhraseMatch:
 
     def __init__(self, matches_df: pd.DataFrame) -> None:
         self.nlp = spacy.load("en_core_web_sm")
-        self.phrase_matcher = spacy.matcher.PhraseMatcher(self.nlp.vocab)
+        self.phrase_matcher = PhraseMatcher(self.nlp.vocab)
         # Only run nlp.make_doc to speed things up
         self.matches_df = matches_df
         self.matches_df.dropna(inplace=True)
@@ -77,7 +77,7 @@ class PhraseMatch:
 
         nlp = spacy.load("en_core_web_sm")
         patterns = [nlp.make_doc(text) for text in series_titles]
-        phrase_matcher = spacy.matcher.PhraseMatcher(nlp.vocab)
+        phrase_matcher = PhraseMatcher(nlp.vocab)
         phrase_matcher.add("Event_EventSeries_Matcher", patterns)
 
         matching_events = []
