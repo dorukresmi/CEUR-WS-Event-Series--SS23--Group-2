@@ -29,7 +29,7 @@ if __name__ == '__main__':
     events.query()
     # Query Event series
     events.event_series_query()
-    # todo: Read the json directly using pyLODStorage
+    # # todo: Read the json directly using pyLODStorage
     records = events.read_as_dict()
     for record in records:
         Ordinal.addParsedOrdinal(record)
