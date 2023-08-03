@@ -7,7 +7,9 @@ from eventseries.src.main.import2Neo4j.Neo4jDriver import Driver
 # from import2Neo4j.Neo4jConnection import Neo4jConnection
 from rdflib import Graph, Literal, URIRef, XSD
 
-class ImportData:
+
+class ImportData(object):
+
     def fetch_data_and_import(self):
         ## Create connection
         conn = Neo4jConnection(uri="bolt://localhost:7687", user="neo4j", pwd="Neelima@17")
@@ -33,7 +35,6 @@ class ImportData:
         with open(events, "r", encoding='utf-8') as json_file:
             data = json.load(json_file)
         return data
-
 
     def import_data_to_neo4j(self, data):
         driver = Driver()
@@ -117,7 +118,6 @@ class ImportData:
                 )
                 session.run(cypher_query, my_dict=my_dict, qid=qid)
 
-
     # def counter_func(self):
     #     data_path = os.path.abspath("../../../data")
     #     data_json = os.path.join(data_path, "EventsWithoutSeries.json")
@@ -143,8 +143,7 @@ class ImportData:
     #         print("Others: ", count[2])
     #         print("No desc attr: ", count[3])
 
-
-    def check_event_with_series(self,events_data,series_data):
+    def check_event_with_series(self, events_data, series_data):
         driver = Driver()
         driver_1 = driver.connect()
         with driver_1.session() as session:
@@ -157,12 +156,10 @@ class ImportData:
                         if series['series']['value'] == event['series']:
                             my_dict[series['series']['value']].append(event['event'])
 
-            for key,values in my_dict.items():
+            for key, values in my_dict.items():
                 for value in values:
                     cypher_query = (
                         "MATCH (m:Events_Series {series: $key}), (n:Events {event: $value}) "
                         "CREATE (n)-[:`Part-of-the-Series`]->(m)"
                     )
                     session.run(cypher_query, key=key, value=value)
-
-

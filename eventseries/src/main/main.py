@@ -13,11 +13,11 @@ from eventseries.src.main.matcher.wikidata_matcher import Matcher
 from eventseries.src.main.parsers.event_extractor import EventExtractor
 from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_WS_TITLE
 from eventseries.src.main.util.utility import Utility
-from import2Neo4j import ImportData_temp
+from import2Neo4j import ImportData
 from query.queried_events import Events
 
 if __name__ == '__main__':
-    importDataTemp = ImportData_temp.ImportData()
+    importDataTemp = ImportData.ImportData()
     # importDataTemp.fetch_data_and_import()
     # importDataTemp.import_data_to_neo4j(importDataTemp.new_func())
     # importDataTemp.import_event_series_to_neo4j(importDataTemp.new_func_series())
