@@ -6,7 +6,6 @@ from typing import List
 import pandas as pd
 
 from eventseries.src.main.dblp import DblpMatching
-from eventseries.src.main.dblp.DblpParsing import load_event_series
 from eventseries.src.main.dblp.EventClasses import EventSeries
 from eventseries.src.main.matcher.match import Match
 from eventseries.src.main.matcher.ngram_matcher import NgramMatch
