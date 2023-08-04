@@ -3,8 +3,8 @@ import os
 
 import nltk
 import pandas as pd
-from nltk.corpus import stopwords
 from nltk import ngrams
+from nltk.corpus import stopwords
 from nltk.metrics.distance import jaccard_distance
 
 
