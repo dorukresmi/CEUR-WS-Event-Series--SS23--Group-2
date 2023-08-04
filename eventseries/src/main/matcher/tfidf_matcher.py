@@ -100,8 +100,7 @@ class TfIdfMatch:
         print("#####BEST THRESHOLD#####")
         print(self.best_threshold)
 
-    def wikidata_match(self, existing_matches):
-        partially_matched_events = []
+    def wikidata_match(self, existing_matches: list) -> list:
         events_file = os.path.join(os.path.abspath("resources"), "events_without_matches.json")
         series_file = os.path.join(os.path.abspath("resources"), "event_series.json")
         with open(events_file) as file:
@@ -126,7 +125,6 @@ class TfIdfMatch:
         # Find partial matches
         matches = np.argwhere(similarity_matrix >= threshold)
 
-        ctr = 0
         partially_matched_events = []
         # Print partial matches
         for match in matches:

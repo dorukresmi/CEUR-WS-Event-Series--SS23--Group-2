@@ -107,7 +107,7 @@ class NgramMatch:
         self.best_n = best_n_gram
         self.best_threshold = best_threshold
 
-    def wikidata_match(self, existing_matches):
+    def wikidata_match(self, existing_matches: list) -> list:
         partially_matched_events = []
         events_file = os.path.join(os.path.abspath("resources"), "events_without_matches.json")
         series_file = os.path.join(os.path.abspath("resources"), "event_series.json")
