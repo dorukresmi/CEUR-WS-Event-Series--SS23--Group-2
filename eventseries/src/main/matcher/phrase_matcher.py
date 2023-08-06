@@ -1,5 +1,6 @@
 import json
 import os
+from typing import List
 
 import pandas as pd
 import spacy
@@ -25,7 +26,7 @@ class PhraseMatch:
         self.event_titles = matches_df["event"].tolist()
         self.phrase_matcher.add("Event_EventSeries_Matcher", patterns)
         # Capturing all the distinct series
-        self.series_distinct = []
+        self.series_distinct = list()
 
     def matcher(self):
         true_positives = 0

@@ -13,7 +13,7 @@ from eventseries.src.main.matcher.phrase_matcher import PhraseMatch
 from eventseries.src.main.matcher.tfidf_matcher import TfIdfMatch
 from eventseries.src.main.matcher.wikidata_matcher import Matcher
 from eventseries.src.main.parsers.event_extractor import EventExtractor
-from eventseries.src.main.util.record_attributes import TITLE, SERIES, LABEL
+from eventseries.src.main.util.record_attributes import LABEL, SERIES, TITLE
 from eventseries.src.main.util.utility import Utility
 
 

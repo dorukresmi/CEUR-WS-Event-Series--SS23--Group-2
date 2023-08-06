@@ -1,5 +1,6 @@
 import json
 import os
+from typing import Dict
 
 import nltk
 import pandas as pd
@@ -41,7 +42,7 @@ class NgramMatch:
                 partially_matched_events = []
                 for event in self.event_titles:
                     # We need this dict because there can be a many-to-many mapping between event and event series
-                    matched_events_dict = {}
+                    matched_events_dict: Dict[str, float] = {}
                     matched_series = ""
                     event_ngrams = set(ngrams(event.split(), n))
                     for series in self.series_titles:

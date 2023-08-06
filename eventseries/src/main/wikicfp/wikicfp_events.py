@@ -20,7 +20,7 @@ def all_series_cfp_obj():
         dic = {
             "index": index,
             "series": series_cfp(
-                ID=row["wikiCfpId"], title=row["title"], dblp=row["dblpSeriesId"]
+                id=row["wikiCfpId"], title=row["title"], dblp=row["dblpSeriesId"]
             ),
         }
         df_l.append(dic)
@@ -28,8 +28,8 @@ def all_series_cfp_obj():
 
 
 class series_cfp:
-    def __init__(self, ID, title=None, dblp=None):
-        self.ID = ID
+    def __init__(self, id, title=None, dblp=None):
+        self.id = id
         self.title = title
         self.dblp = dblp
 
@@ -39,7 +39,7 @@ class series_cfp:
     def get_dblp(self):
         if self.dblp == None:
             df = series_cfp_input()
-            self.dblp = df[df["seriesId"] == self.ID]["dblpSeriesId"].values
+            self.dblp = df[df["seriesId"] == self.id]["dblpSeriesId"].values
             return self.dblp
 
         else:
@@ -48,7 +48,7 @@ class series_cfp:
     def get_Title(self):
         if self.title == None:
             df = series_cfp_input()
-            self.title = df[df["seriesId"] == self.ID]["title"].values
+            self.title = df[df["seriesId"] == self.id]["title"].values
             return self.title
 
         else:
@@ -56,18 +56,18 @@ class series_cfp:
 
     def get_acronym(self):
         df = series_cfp_input()
-        self.acronym = df[df["seriesId"] == self.ID]["acronym"].values
+        self.acronym = df[df["seriesId"] == self.id]["acronym"].values
         return self.acronym
 
     def get_url(self):
         df = series_cfp_input()
-        self.url = df[df["seriesId"] == self.ID]["url"].values
+        self.url = df[df["seriesId"] == self.id]["url"].values
         return self.url
 
     def get_relativ_events(self):
         df = event_cfp_input()
         events_l = []
-        df_event = df[df["seriesId"] == self.ID]
+        df_event = df[df["seriesId"] == self.id]
         for index, row in df_event.iterrows():
             events_l.append(
                 event_cfp(ID=row["eventId"], title=row["title"], year=row["year"])

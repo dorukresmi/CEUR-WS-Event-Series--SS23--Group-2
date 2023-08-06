@@ -10,8 +10,6 @@ from eventseries.src.main.util.utility import Utility
 
 
 class VolumeParser:
-    cache = None
-
     def __init__(self):
         self.cache = Cache()
 
