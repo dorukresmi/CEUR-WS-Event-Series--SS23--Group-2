@@ -7,6 +7,7 @@ from eventseries.src.main.util.record_attributes import LABEL, TITLE, CEUR_WS_TI
 
 
 class Utility(object):
+    @staticmethod
     def serialize_datetime(obj):
         if isinstance(obj, datetime.datetime):
             return obj.isoformat()
