@@ -2,7 +2,7 @@ import datetime
 import re
 from typing import List
 
-from eventseries.src.main.dblp.EventClasses import EventSeries
+# from eventseries.src.main.dblp.EventClasses import EventSeries
 from eventseries.src.main.util.record_attributes import CEUR_WS_TITLE, LABEL, TITLE
 
 

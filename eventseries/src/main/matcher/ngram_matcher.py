@@ -1,6 +1,6 @@
 import json
 import os
-from typing import Dict
+from typing import Dict, List
 
 import nltk
 import pandas as pd
@@ -18,7 +18,7 @@ class NgramMatch:
         self.matches_df["event"] = self.event_titles
         self.series_titles = self.remove_stopwords(matches_df["event_series"].tolist())
         self.matches_df["event_series"] = self.series_titles
-        self.series_distinct = []
+        self.series_distinct: List[str] = []
         self.n_grams = [3, 4, 5]
         self.threshold_values = [1, 0.9, 0.8, 0.7, 0.6, 0.5]
         self.best_threshold = 0
@@ -101,7 +101,7 @@ class NgramMatch:
                     best_precision = precision
                     best_recall = recall
                     max_f1_score = f1_score
-                    max_matches = len(partially_matched_events)
+                    # max_matches = len(partially_matched_events)
                     best_n_gram = n
                     best_threshold = threshold
                 # print("F1-Score: ", f1_score)

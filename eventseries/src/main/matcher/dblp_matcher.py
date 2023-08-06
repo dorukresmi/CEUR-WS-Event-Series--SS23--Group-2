@@ -3,8 +3,8 @@ import os
 import pickle
 from typing import List
 
-from eventseries.src.main.dblp.DblpParsing import load_event_series
-from eventseries.src.main.dblp.EventClasses import EventSeries
+# from eventseries.src.main.dblp.DblpParsing import load_event_series
+# from eventseries.src.main.dblp.EventClasses import EventSeries
 from eventseries.src.main.matcher.nlp_matcher import NlpMatcher
 
 

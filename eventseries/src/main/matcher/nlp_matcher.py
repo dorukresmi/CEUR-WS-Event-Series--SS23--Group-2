@@ -6,7 +6,8 @@ from typing import List
 import pandas as pd
 
 from eventseries.src.main.dblp import DblpMatching
-from eventseries.src.main.dblp.EventClasses import EventSeries
+
+# from eventseries.src.main.dblp.EventClasses import EventSeries
 from eventseries.src.main.matcher.match import Match
 from eventseries.src.main.matcher.ngram_matcher import NgramMatch
 from eventseries.src.main.matcher.phrase_matcher import PhraseMatch
@@ -35,7 +36,7 @@ class NlpMatcher:
         n_gram_matches = ngram_matcher.wikidata_match(matching_events)
         tf_idf_matcher = TfIdfMatch(self.df)
         tf_idf_matcher.matcher()
-        tf_idf_matches = tf_idf_matcher.wikidata_match(n_gram_matches)
+        # tf_idf_matches = tf_idf_matcher.wikidata_match(n_gram_matches)
 
     """We create a training and test dataset out of the matches from:
     DBLP (Matches from event to event series for conferences)
