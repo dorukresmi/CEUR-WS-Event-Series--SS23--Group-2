@@ -7,9 +7,10 @@ from typing import Optional, Tuple, Union, List
 
 from bs4 import Tag, BeautifulSoup
 
-from EventClasses import Event, DblpEvent, EventSeries
-from VenueInformationClasses import HasPart
-from VenueInformationClasses import (
+from event_classes import Event, DblpEvent, EventSeries
+from eventseries.src.main.dblp.dblp_context import DblpContext
+from venue_information import HasPart
+from venue_information import (
     VenueInformation,
     IsPartOf,
     NameWithOptionalReference,
@@ -19,7 +20,6 @@ from VenueInformationClasses import (
     Successor,
     YearRange,
 )
-from eventseries.src.main.dblp.dblp import DblpContext
 
 
 class EventTitleParser:

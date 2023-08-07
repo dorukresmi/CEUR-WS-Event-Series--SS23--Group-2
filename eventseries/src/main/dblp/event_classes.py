@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional, List
 
-from VenueInformationClasses import VenueInformation
+from venue_information import VenueInformation
 
 
 @dataclass
