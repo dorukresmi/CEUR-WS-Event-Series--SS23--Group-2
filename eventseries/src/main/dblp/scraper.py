@@ -1,9 +1,9 @@
 import json
 from pathlib import Path
-from typing import Optional, List, Tuple
+from typing import List, Optional, Tuple
 
 import pandas as pd
-from bs4 import SoupStrainer, BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.webdriver import WebDriver
@@ -30,7 +30,7 @@ class DblpScraper:
         df = df[
             df.tag.apply(lambda div: len(div.find_all()) != 0)
         ]  # filter out emtpy divs
-        df["venue"] = df["tag"].map(lambda div: parse_venue_div(div))
+        df["venue"] = df["tag"].map(parse_venue_div)
         return df
 
     def crawl_all_events_without_series(
@@ -132,16 +132,19 @@ class DblpScraper:
                     html,
                 )
 
-            except ValueError as e:
+            except ValueError as exc:
                 print(
-                    f"Got exception for event: " + dblp_event + " with error " + str(e)
+                    "Got exception for event: " + dblp_event + " with error " + str(exc)
                 )
             parent = Path(dblp_event).parent
             try:
                 self.ctx.request_or_load_dblp(dblp_db_entry=str(parent), wait_time=1)
-            except ValueError as e:
+            except ValueError as exc:
                 print(
-                    f"Got exception for event: " + str(parent) + " with error " + str(e)
+                    "Got exception for event: "
+                    + str(parent)
+                    + " with error "
+                    + str(exc)
                 )
             if counter % 100 == 0:
                 print("Loaded: " + str(counter))

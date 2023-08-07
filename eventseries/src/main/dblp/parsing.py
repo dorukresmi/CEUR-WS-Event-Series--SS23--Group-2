@@ -3,21 +3,21 @@ import pickle
 import re
 from datetime import datetime
 from pathlib import Path
-from typing import Optional, Tuple, Union, List
+from typing import List, Optional, Tuple
 
-from bs4 import Tag, BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
-from event_classes import Event, DblpEvent, EventSeries
+from event_classes import DblpEvent, Event, EventSeries
 from eventseries.src.main.dblp.dblp_context import DblpContext
 from venue_information import HasPart
 from venue_information import (
-    VenueInformation,
     IsPartOf,
     NameWithOptionalReference,
     Predecessor,
     Related,
     Status,
     Successor,
+    VenueInformation,
     YearRange,
 )
 
@@ -38,13 +38,11 @@ class EventTitleParser:
             title_with_virtual = EventTitleParser.extract_virtual_location(full_title)
             if title_with_virtual is not None:
                 return title_with_virtual
-            else:
-                print("Missing : in title: " + full_title)
-                if full_title.count(";") == 1:
-                    print("Found ; in title: " + full_title + " using this instead.")
-                    return EventTitleParser.extract_location(
-                        full_title.replace(";", ":")
-                    )
+
+            print("Missing : in title: " + full_title)
+            if full_title.count(";") == 1:
+                print("Found ; in title: " + full_title + " using this instead.")
+                return EventTitleParser.extract_location(full_title.replace(";", ":"))
 
         event_title_opt_location = full_title.split(":")
         location: Optional[str] = (
@@ -98,9 +96,9 @@ def event_from_title(full_title: str):
 def dblp_event_from_tag(headline: Tag, given_dblp_id: Optional[str] = None):
     if not isinstance(headline, Tag) or headline.attrs["id"] != "headline":
         raise ValueError(
-            "headline parameter was either not instance of Tag or did not had 'headline' as id"
-            + str(headline)
-        )
+    "headline parameter was either not instance of Tag or did not had "
+    "'headline' as id" + str(headline)
+)
 
     dblp_id = (
         headline.attrs["data-bhtkey"].removeprefix("db/")
@@ -125,7 +123,7 @@ class EventSeriesParser:
             )
 
             return last_breadcrumb.find("a").attrs["href"] == "https://dblp.org/db/conf"
-        except Union[AttributeError, KeyError, ValueError]:
+        except (AttributeError, KeyError, ValueError):
             return False
 
     @staticmethod
@@ -276,10 +274,10 @@ def year_range_from_string(text: str):
 
 class VenueInformationParser:
     @staticmethod
-    def _parse_access(li: BeautifulSoup) -> bool:
-        if "some or all publications openly available" not in li.get_text():
+    def _parse_access(li_tag: BeautifulSoup) -> bool:
+        if "some or all publications openly available" not in li_tag.get_text():
             raise ValueError(
-                f"Expected 'some or all publications openly available' in {li.get_text()}"
+                f"Expected 'some or all publications openly available' in {li_tag.get_text()}"
             )
         return True
 
@@ -290,70 +288,72 @@ class VenueInformationParser:
         if "(" in em_text:
             try:
                 years = year_range_from_string(em_text)
-            except ValueError as e:
-                print(e)
+            except ValueError as exc:
+                print(exc)
         part = name_with_opt_reference_from_tag(li)
         return HasPart(part=part, years=years)
 
     @staticmethod
-    def _parse_is_part_of(li: BeautifulSoup) -> IsPartOf:
+    def _parse_is_part_of(li_tag: BeautifulSoup) -> IsPartOf:
         years = None
-        em_text = li.find("em").get_text().strip("is part of").rstrip(":")
+        em_text = li_tag.find("em").get_text().strip("is part of").rstrip(":")
         if "(" in em_text:
             try:
                 years = year_range_from_string(em_text)
-            except ValueError as e:
-                print(e)
-        part = name_with_opt_reference_from_tag(li)
+            except ValueError as exc:
+                print(exc)
+        part = name_with_opt_reference_from_tag(li_tag)
         return IsPartOf(partOf=part, years=years)
 
     @staticmethod
-    def _parse_not_to_be_confused_with(li: BeautifulSoup) -> NameWithOptionalReference:
-        return name_with_opt_reference_from_tag(li)
+    def _parse_not_to_be_confused_with(
+            li_tag: BeautifulSoup,
+    ) -> NameWithOptionalReference:
+        return name_with_opt_reference_from_tag(li_tag)
 
     @staticmethod
-    def _parse_predecessor(li: BeautifulSoup) -> Predecessor:
+    def _parse_predecessor(li_tag: BeautifulSoup) -> Predecessor:
         years = None
-        em_text = li.find("em").get_text().strip("predecessor").rstrip(":")
+        em_text = li_tag.find("em").get_text().strip("predecessor").rstrip(":")
         if "(" in em_text:
             try:
                 years = year_range_from_string(em_text)
-            except ValueError as e:
-                print(e)
-        reference = name_with_opt_reference_from_tag(li)
+            except ValueError as exc:
+                print(exc)
+        reference = name_with_opt_reference_from_tag(li_tag)
         return Predecessor(reference=reference, year_range=years)
 
     @staticmethod
-    def _parse_related(li: BeautifulSoup) -> Related:
-        reference = name_with_opt_reference_from_tag(li)
-        em_text = li.find("em").get_text()
+    def _parse_related(li_tag: BeautifulSoup) -> Related:
+        reference = name_with_opt_reference_from_tag(li_tag)
+        em_text = li_tag.find("em").get_text()
         if "(" in em_text:
-            meta_info = em_text[em_text.find("(") + 1 : em_text.find(")")]
+            meta_info = em_text[em_text.find("(") + 1: em_text.find(")")]
             return Related(relation_qualifier=meta_info, reference=reference)
         return Related(reference=reference)
 
     @staticmethod
-    def _parse_status(li: BeautifulSoup) -> Status:
+    def _parse_status(li_tag: BeautifulSoup) -> Status:
         pattern = r"as of (\d{4}), this venue has been discontinued"
-        discontinued_years = re.findall(pattern, li.get_text())
+        discontinued_years = re.findall(pattern, li_tag.get_text())
         if len(discontinued_years) != 1:
             raise ValueError("Could not find discontinued information")
         return Status(discontinuation_year=int(discontinued_years[0]))
 
     @staticmethod
-    def _parse_successor(li: BeautifulSoup) -> Successor:
+    def _parse_successor(li_tag: BeautifulSoup) -> Successor:
         years = None
         merged_into = False
-        em_text = li.find("em").get_text().strip("successor").rstrip(":")
+        em_text = li_tag.find("em").get_text().strip("successor").rstrip(":")
         if "(" in em_text:
             if "merged into" in em_text:
                 merged_into = True
             else:
                 try:
                     years = year_range_from_string(em_text)
-                except ValueError as e:
-                    print(e)
-        reference = name_with_opt_reference_from_tag(li)
+                except ValueError as exc:
+                    print(exc)
+        reference = name_with_opt_reference_from_tag(li_tag)
         return Successor(reference=reference, year_range=years, merged_into=merged_into)
 
 
@@ -384,7 +384,7 @@ def parse_venue_div(info_section_div: BeautifulSoup) -> Optional[VenueInformatio
         for name in names
     }
 
-    parameter = dict()
+    parameter = {}
     try:
         for name in names:
             with_underscores = name.replace(" ", "_")
@@ -392,8 +392,8 @@ def parse_venue_div(info_section_div: BeautifulSoup) -> Optional[VenueInformatio
             parameter[with_underscores] = [parse_method(li) for li in grouped[name]]
 
         return VenueInformation(**parameter)
-    except Exception as e:
-        print(f"Could not parse div: {info_section_div} got exception: {str(e)}")
+    except Exception as exc:
+        print(f"Could not parse div: {info_section_div} got exception: {str(exc)}")
 
 
 def store_event_series(
