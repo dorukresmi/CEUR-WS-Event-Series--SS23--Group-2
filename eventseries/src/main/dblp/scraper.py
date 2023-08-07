@@ -9,8 +9,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.webdriver import WebDriver
 from selenium.webdriver.remote.webelement import WebElement
 
-from dblp_context import DblpContext
-from parsing import parse_venue_div
+from eventseries.src.main.dblp.dblp_context import DblpContext
+from eventseries.src.main.dblp.parsing import parse_venue_div
 
 
 class DblpScraper:

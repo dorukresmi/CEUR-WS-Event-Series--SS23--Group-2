@@ -7,9 +7,9 @@ from typing import List, Optional, Tuple
 
 from bs4 import BeautifulSoup, Tag
 
-from event_classes import DblpEvent, Event, EventSeries
 from eventseries.src.main.dblp.dblp_context import DblpContext
-from venue_information import (
+from eventseries.src.main.dblp.event_classes import DblpEvent, Event, EventSeries
+from eventseries.src.main.dblp.venue_information import (
     HasPart,
     IsPartOf,
     NameWithOptionalReference,
@@ -97,9 +97,9 @@ def event_from_title(full_title: str):
 def dblp_event_from_tag(headline: Tag, given_dblp_id: Optional[str] = None):
     if not isinstance(headline, Tag) or headline.attrs["id"] != "headline":
         raise ValueError(
-    "headline parameter was either not instance of Tag or did not had "
-    "'headline' as id" + str(headline)
-)
+            "headline parameter was either not instance of Tag or did not had "
+            "'headline' as id" + str(headline)
+        )
 
     dblp_id = (
         headline.attrs["data-bhtkey"].removeprefix("db/")
@@ -243,10 +243,8 @@ def name_with_opt_reference_from_tag(tag: BeautifulSoup):
                 + str(tag)
             )
         return NameWithOptionalReference(name="".join(strings).strip())
-    else:
-        return NameWithOptionalReference(
-            name=href.get_text(), reference=href.attrs["href"]
-        )
+
+    return NameWithOptionalReference(name=href.get_text(), reference=href.attrs["href"])
 
 
 def year_range_from_string(text: str):
@@ -285,15 +283,15 @@ class VenueInformationParser:
         return True
 
     @staticmethod
-    def _parse_has_part(li: BeautifulSoup) -> HasPart:
+    def _parse_has_part(li_tag: BeautifulSoup) -> HasPart:
         years = None
-        em_text = li.find("em").get_text().strip("has part").rstrip(":")
+        em_text = li_tag.find("em").get_text().strip("has part").rstrip(":")
         if "(" in em_text:
             try:
                 years = year_range_from_string(em_text)
             except ValueError as exc:
                 print(exc)
-        part = name_with_opt_reference_from_tag(li)
+        part = name_with_opt_reference_from_tag(li_tag)
         return HasPart(part=part, years=years)
 
     @staticmethod
@@ -310,7 +308,7 @@ class VenueInformationParser:
 
     @staticmethod
     def _parse_not_to_be_confused_with(
-            li_tag: BeautifulSoup,
+        li_tag: BeautifulSoup,
     ) -> NameWithOptionalReference:
         return name_with_opt_reference_from_tag(li_tag)
 
@@ -331,7 +329,8 @@ class VenueInformationParser:
         reference = name_with_opt_reference_from_tag(li_tag)
         em_text = li_tag.find("em").get_text()
         if "(" in em_text:
-            meta_info = em_text[em_text.find("(") + 1 : em_text.find(")")]return Related(relation_qualifier=meta_info, reference=reference)
+            meta_info = em_text[em_text.find("(") + 1 : em_text.find(")")]
+            return Related(relation_qualifier=meta_info, reference=reference)
         return Related(reference=reference)
 
     @staticmethod

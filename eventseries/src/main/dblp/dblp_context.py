@@ -1,6 +1,6 @@
 import time
 from pathlib import Path
-from typing import Dict
+from typing import Dict, List, Optional
 
 import requests
 
@@ -113,10 +113,11 @@ class DblpContext:
             retry_time = response.headers.get("Retry-After")
             error_msg = "Too many requests to dblp.org"
             if retry and retry_time is not None:
-    print(f"{error_msg} Waiting for {retry_time}s before retrying.")
-    time.sleep(int(retry_time))
-    return DblpContext.request_dblp(dblp_url, retry)
-            raise ValueError(error_msg)  # failed request without retrying
+                print(f"{error_msg} Waiting for {retry_time}s before retrying.")
+                time.sleep(int(retry_time))
+                return DblpContext.request_dblp(dblp_url, retry)
+            # failed request without retrying
+            raise ValueError(error_msg)
         if response.status_code != 200:
             raise ValueError(
                 f"Failed to request {dblp_url} with code {response.status_code}."
@@ -132,9 +133,9 @@ class DblpContext:
         **kwargs,
     ):
         if (
-                not ignore_cache
-                and self.is_cached(dblp_db_entry)
-                and self.get_cached(dblp_db_entry) != ""
+            not ignore_cache
+            and self.is_cached(dblp_db_entry)
+            and self.get_cached(dblp_db_entry) != ""
         ):
             return self.get_cached(dblp_db_entry)
         # Couldn't find id in cache -> requesting it:
@@ -166,7 +167,7 @@ class DblpContext:
         return [key for key in self.dblp_cache if key.startswith(series_id)]
 
     def get_series_with_events(
-            self, series_ids: Optional[List[str]] = None
+        self, series_ids: Optional[List[str]] = None
     ) -> Dict[str, List[str]]:
         """
         Map every id in series_ids to all events that are part of the series.

@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
-from venue_information import VenueInformation
+from eventseries.src.main.dblp.venue_information import VenueInformation
 
 
 @dataclass

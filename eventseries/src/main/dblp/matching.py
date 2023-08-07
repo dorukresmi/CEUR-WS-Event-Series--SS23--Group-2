@@ -3,8 +3,8 @@ from typing import List
 
 import pandas as pd
 
-from event_classes import EventSeries
-from parsing import load_event_series
+from eventseries.src.main.dblp.event_classes import EventSeries
+from eventseries.src.main.dblp.parsing import load_event_series
 
 
 def is_conference_description(wikidata_event):
