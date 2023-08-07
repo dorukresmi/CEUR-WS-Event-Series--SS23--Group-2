@@ -18,7 +18,8 @@
 #         # resources_path = os.path.abspath("resources")
 #         # events = os.path.join(resources_path, "events_with_ordinal.json")
 #         query_string = """
-#         CALL apoc.load.json("file:///C:\\Users\\Vinay Shah\\Desktop\\All_Files\\CEUR-WS-Event-Series--SS23\\eventseries\\src\\main\\resources\\person.json")
+#         CALL apoc.load.json("file:///C:\\Users\\Vinay Shah\\Desktop\\All_Files\\CEUR-WS-Event-Ser
+#         ies--SS23\\eventseries\\src\\main\\resources\\person.json")
 #
 #         YIELD value
 #         MERGE (p:Person {name: value.name})

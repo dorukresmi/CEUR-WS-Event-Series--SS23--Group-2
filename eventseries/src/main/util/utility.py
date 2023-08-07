@@ -1,6 +1,5 @@
 import datetime
 import re
-from typing import List
 
 # from eventseries.src.main.dblp.EventClasses import EventSeries
 from eventseries.src.main.util.record_attributes import CEUR_WS_TITLE, LABEL, TITLE
@@ -72,9 +71,9 @@ class Utility(object):
 
     """One-to-one mapping dblp events to events series """
 
-    def event_titles_to_event_series(self, events_dataset: List[EventSeries]):
-        matches = {}
-        for event_series in events_dataset:
-            for event in event_series.mentioned_events:
-                matches[event] = event_series.name
-        return matches
+    # def event_titles_to_event_series(self, events_dataset: List[EventSeries]):
+    #     matches = {}
+    #     for event_series in events_dataset:
+    #         for event in event_series.mentioned_events:
+    #             matches[event] = event_series.name
+    #     return matches

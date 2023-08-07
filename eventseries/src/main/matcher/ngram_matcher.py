@@ -26,7 +26,7 @@ class NgramMatch:
 
     def matcher(self):
         max_f1_score = 0
-        max_matches = 0
+        # max_matches = 0
         best_precision = 0
         best_recall = 0
         best_n_gram = 0
