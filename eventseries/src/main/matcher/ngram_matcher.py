@@ -138,7 +138,7 @@ class NgramMatch:
             ]
 
         for event in event_titles:
-            matched_events_dict = {}
+            matched_events_dict: Dict[str, float] = {}
             matched_series = ""
             event_ngrams = set(ngrams(event.split(), self.best_n))
             for series in series_titles:
