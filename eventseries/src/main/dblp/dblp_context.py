@@ -1,6 +1,6 @@
 import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict
 
 import requests
 
@@ -112,10 +112,10 @@ class DblpContext:
         if response.status_code == 429:
             retry_time = response.headers.get("Retry-After")
             error_msg = "Too many requests to dblp.org"
-            if retry:
-                print(f"{error_msg} Waiting for {retry_time}s before retrying.")
-                time.sleep(int(retry_time))
-                return DblpContext.request_dblp(dblp_url, retry)
+            if retry and retry_time is not None:
+    print(f"{error_msg} Waiting for {retry_time}s before retrying.")
+    time.sleep(int(retry_time))
+    return DblpContext.request_dblp(dblp_url, retry)
             raise ValueError(error_msg)  # failed request without retrying
         if response.status_code != 200:
             raise ValueError(

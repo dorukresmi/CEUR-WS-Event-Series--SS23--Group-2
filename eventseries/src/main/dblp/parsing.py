@@ -9,8 +9,8 @@ from bs4 import BeautifulSoup, Tag
 
 from event_classes import DblpEvent, Event, EventSeries
 from eventseries.src.main.dblp.dblp_context import DblpContext
-from venue_information import HasPart
 from venue_information import (
+    HasPart,
     IsPartOf,
     NameWithOptionalReference,
     Predecessor,
@@ -83,6 +83,7 @@ class EventTitleParser:
         ordinal = int(opt_ordinal.groups()[0])
         if ordinal < 0 or ordinal > 100:
             print(f"Found suspicious ordinal: {ordinal} in title: {title}")
+        return ordinal
 
 
 def event_from_title(full_title: str):
@@ -190,11 +191,13 @@ def event_series_from_soup(soup: BeautifulSoup, given_dblp_id: Optional[str] = N
     if "Redirecting" in name:
         print("Suspicious name found: " + name + " for dblp_id: " + dblp_id)
     opt_abbreviation = re.search(r"\((\w{1,20})\)", name)
-    if opt_abbreviation is None and re.search(r"\((\w+)\)", name):
-        print(
-            "Possible abbreviation longer than 20 characters: "
-            + re.search(r"\((\w+)\)", name).groups()[0]
-        )
+    if opt_abbreviation is None:
+        long_abbreviation = re.search(r"\((\w+)\)", name)
+        if long_abbreviation is not None:
+            print(
+                "Possible abbreviation longer than 20 characters: "
+                + long_abbreviation.groups()[0]
+            )
     abbreviation = None
     if opt_abbreviation is not None and len(opt_abbreviation.groups()) == 1:
         abbreviation = opt_abbreviation.groups()[0]
@@ -328,8 +331,7 @@ class VenueInformationParser:
         reference = name_with_opt_reference_from_tag(li_tag)
         em_text = li_tag.find("em").get_text()
         if "(" in em_text:
-            meta_info = em_text[em_text.find("(") + 1: em_text.find(")")]
-            return Related(relation_qualifier=meta_info, reference=reference)
+            meta_info = em_text[em_text.find("(") + 1 : em_text.find(")")]return Related(relation_qualifier=meta_info, reference=reference)
         return Related(reference=reference)
 
     @staticmethod
@@ -394,6 +396,7 @@ def parse_venue_div(info_section_div: BeautifulSoup) -> Optional[VenueInformatio
         return VenueInformation(**parameter)
     except Exception as exc:
         print(f"Could not parse div: {info_section_div} got exception: {str(exc)}")
+        return None
 
 
 def store_event_series(
