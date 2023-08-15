@@ -8,7 +8,10 @@ import os
 
 from plp.ordinal import Ordinal
 
+from eventseries.src.main.completeSeries.series_completion import SeriesCompletion
 from eventseries.src.main.matcher.nlp_matcher import NlpMatcher
+
+# from eventseries.src.main.matcher.nlp_matcher import NlpMatcher
 from eventseries.src.main.matcher.wikidata_matcher import Matcher
 from eventseries.src.main.parsers.event_extractor import EventExtractor
 from eventseries.src.main.util.record_attributes import TITLE, LABEL, CEUR_WS_TITLE
@@ -125,6 +128,10 @@ if __name__ == "__main__":
     # TODO: Enable when local neo4j instance is running
     # import_data = ImportData()
     # import_data.fetch_data_and_import()
+
+    # Use case scenario 1
+    series_completion = SeriesCompletion()
+    event_series = series_completion.get_event_series_from_ceur_ws_proceedings()
 
     # nlp matches
     nlp_matcher = NlpMatcher(event_extractor, matcher)
