@@ -40,7 +40,7 @@ class QueryEvents(unittest.TestCase):
             Ordinal.addParsedOrdinal(record)
             if record.get("ordinal"):
                 counter += 1
-        self.assertEqual(counter, 3)
+        self.assertEqual(counter, 4)
 
     def test_check_events_with_series(self):
         event_extractor = EventExtractor()
