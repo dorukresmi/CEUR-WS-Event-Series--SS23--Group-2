@@ -55,7 +55,7 @@ class Events(object):
 
     """TODO: correct this, 2 queries are not required"""
 
-    def read_as_dict(self):
+    def read_as_dict(self) -> dict:
         query_record = {
             "lang": "sparql",
             "name": "CEUR-WS events",

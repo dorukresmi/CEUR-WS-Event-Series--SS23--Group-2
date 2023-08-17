@@ -1,4 +1,6 @@
 import datetime
+import json
+import os
 import re
 
 # from eventseries.src.main.dblp.EventClasses import EventSeries
@@ -77,3 +79,25 @@ class Utility(object):
     #         for event in event_series.mentioned_events:
     #             matches[event] = event_series.name
     #     return matches
+
+    def read_event_titles(self):
+        """Json reader for wikidata event titles"""
+        events_file = os.path.join(
+            os.path.abspath("resources"), "events_without_matches.json"
+        )
+        with open(events_file) as file:
+            events = json.load(file)
+            event_titles = [item["title"] for item in events if "title" in item]
+        return event_titles
+
+    def read_event_series_titles(self):
+        """Json reader for wikidata event series titles"""
+        series_file = os.path.join(os.path.abspath("resources"), "event_series.json")
+        with open(series_file) as file:
+            series = json.load(file)
+            series_titles = [
+                item["title"]["value"]
+                for item in series["results"]["bindings"]
+                if "title" in item
+            ]
+        return series_titles

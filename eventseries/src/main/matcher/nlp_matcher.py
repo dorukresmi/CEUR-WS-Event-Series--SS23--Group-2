@@ -7,13 +7,14 @@ import pandas as pd
 
 from eventseries.src.main.dblp import matching
 from eventseries.src.main.dblp.event_classes import EventSeries
-
+from eventseries.src.main.matcher.acronym_matcher import AcronymMatch
 from eventseries.src.main.matcher.match import Match
 from eventseries.src.main.matcher.ngram_matcher import NgramMatch
 from eventseries.src.main.matcher.phrase_matcher import PhraseMatch
 from eventseries.src.main.matcher.tfidf_matcher import TfIdfMatch
 from eventseries.src.main.matcher.wikidata_matcher import Matcher
 from eventseries.src.main.parsers.event_extractor import EventExtractor
+from eventseries.src.main.util.fetch_miscellaneous_event_series import FetchEventSeries
 from eventseries.src.main.util.record_attributes import LABEL, SERIES, TITLE
 from eventseries.src.main.util.utility import Utility
 
@@ -28,16 +29,28 @@ class NlpMatcher:
             event_extractor=event_extractor, matcher=matcher
         )
 
-    def match(self):
+    def match(self, events: List[str], event_series: List[str]):
+        """Extend the event series list by adding miscellaneous event series"""
+        event_series.extend(self.read_miscellaneous_event_series())
+
         phrase_matcher = PhraseMatch(self.df)
         phrase_matcher.matcher()
-        matching_events = phrase_matcher.wikidata_match()
+        matching_events = phrase_matcher.wikidata_match(events, event_series)
+        acronym_matcher = AcronymMatch(self.df)
+        acronym_matcher.matcher()
+        acronym_matches = acronym_matcher.wikidata_match(
+            matching_events, events, event_series
+        )
         ngram_matcher = NgramMatch(self.df)
         ngram_matcher.matcher()
-        n_gram_matches = ngram_matcher.wikidata_match(matching_events)
+        n_gram_matches = ngram_matcher.wikidata_match(
+            acronym_matches, events, event_series
+        )
         tf_idf_matcher = TfIdfMatch(self.df)
         tf_idf_matcher.matcher()
-        # tf_idf_matches = tf_idf_matcher.wikidata_match(n_gram_matches)
+        tf_idf_matches = tf_idf_matcher.wikidata_match(
+            n_gram_matches, events, event_series
+        )
 
     """We create a training and test dataset out of the matches from:
     DBLP (Matches from event to event series for conferences)
@@ -116,3 +129,7 @@ class NlpMatcher:
                             Match(item[LABEL], series_item["seriesLabel"]["value"])
                         )
         return matches
+
+    def read_miscellaneous_event_series(self) -> List[str]:
+        fetch_event_series = FetchEventSeries()
+        return fetch_event_series.get_bard_event_series()

@@ -1,5 +1,3 @@
-import json
-import os
 from typing import Dict, List
 
 import nltk
@@ -117,25 +115,16 @@ class NgramMatch:
         self.best_n = best_n_gram
         self.best_threshold = best_threshold
 
-    def wikidata_match(self, existing_matches: list) -> list:
+    def wikidata_match(
+        self,
+        existing_matches: List[str],
+        event_titles: List[str],
+        series_titles: List[str],
+    ) -> List[str]:
         partially_matched_events = []
-        events_file = os.path.join(
-            os.path.abspath("resources"), "events_without_matches.json"
-        )
-        series_file = os.path.join(os.path.abspath("resources"), "event_series.json")
-        with open(events_file) as file:
-            events = json.load(file)
-            event_titles = [item["title"] for item in events if "title" in item]
         event_titles = [
             event for event in event_titles if event not in existing_matches
         ]
-        with open(series_file) as file:
-            series = json.load(file)
-            series_titles = [
-                item["title"]["value"]
-                for item in series["results"]["bindings"]
-                if "title" in item
-            ]
 
         for event in event_titles:
             matched_events_dict: Dict[str, float] = {}

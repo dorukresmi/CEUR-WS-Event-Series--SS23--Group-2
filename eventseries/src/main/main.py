@@ -135,6 +135,6 @@ if __name__ == "__main__":
 
     # nlp matches
     nlp_matcher = NlpMatcher(event_extractor, matcher)
-    nlp_matcher.match()
+    nlp_matcher.match(utility.read_event_titles(), utility.read_event_series_titles())
 
     # nlp_matcher.

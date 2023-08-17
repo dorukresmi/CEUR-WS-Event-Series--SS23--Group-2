@@ -30,7 +30,7 @@ dependencies = [
     'nltk>=3.8',
     'pandas>=1.4.4',
     'numpy>=1.21.5',
-    'PyDictionary>=2.0.1'
+    'orjson>=3.9.4'
 
 
 ]

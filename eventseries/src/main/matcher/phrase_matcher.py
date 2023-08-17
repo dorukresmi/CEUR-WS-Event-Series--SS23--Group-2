@@ -1,12 +1,11 @@
-import json
-import os
 from typing import List
-
-# from typing import List
 
 import pandas as pd
 import spacy
 import spacy.matcher
+
+
+# from typing import List
 
 
 class PhraseMatch:
@@ -71,22 +70,9 @@ class PhraseMatch:
 
         # print("Number of containment matches from event titles: ", len(matching_events))
 
-    def wikidata_match(self):
-        events_file = os.path.join(
-            os.path.abspath("resources"), "events_without_matches.json"
-        )
-        series_file = os.path.join(os.path.abspath("resources"), "event_series.json")
-        with open(events_file) as file:
-            events = json.load(file)
-            event_titles = [item["title"] for item in events if "title" in item]
-        with open(series_file) as file:
-            series = json.load(file)
-            series_titles = [
-                item["title"]["value"]
-                for item in series["results"]["bindings"]
-                if "title" in item
-            ]
-
+    def wikidata_match(
+        self, event_titles: List[str], series_titles: List[str]
+    ) -> List[str]:
         nlp = spacy.load("en_core_web_sm")
         patterns = [nlp.make_doc(text) for text in series_titles]
         phrase_matcher = spacy.matcher.PhraseMatcher(nlp.vocab)

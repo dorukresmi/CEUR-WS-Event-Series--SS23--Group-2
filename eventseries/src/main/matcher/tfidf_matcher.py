@@ -1,5 +1,4 @@
-import json
-import os
+from typing import List
 
 import numpy as np
 import pandas as pd
@@ -100,27 +99,18 @@ class TfIdfMatch:
             # print("F1-Score: ", f1_score)
             # print("Number of partial matches: ", len(partially_matched_events))
             # print()
-        print("#####BEST THRESHOLD#####")
-        print(self.best_threshold)
+        # print("#####BEST THRESHOLD#####")
+        # print(self.best_threshold)
 
-    def wikidata_match(self, existing_matches: list) -> list:
-        events_file = os.path.join(
-            os.path.abspath("resources"), "events_without_matches.json"
-        )
-        series_file = os.path.join(os.path.abspath("resources"), "event_series.json")
-        with open(events_file) as file:
-            events = json.load(file)
-            event_titles = [item["title"] for item in events if "title" in item]
+    def wikidata_match(
+        self,
+        existing_matches: List[str],
+        event_titles: List[str],
+        series_titles: List[str],
+    ) -> List[str]:
         event_titles = [
             event for event in event_titles if event not in existing_matches
         ]
-        with open(series_file) as file:
-            series = json.load(file)
-            series_titles = [
-                item["title"]["value"]
-                for item in series["results"]["bindings"]
-                if "title" in item
-            ]
 
         vectorizer = TfidfVectorizer(stop_words=list(text.ENGLISH_STOP_WORDS))
         array1_strings = event_titles
@@ -150,5 +140,5 @@ class TfIdfMatch:
             #     series_distinct.append(series)
             #     print()
             partially_matched_events.append(array1_strings[array1_index])
-        print("Number of partial matches: ", len(partially_matched_events))
+        print("Number of partial matches from Tf-Idf: ", len(partially_matched_events))
         return partially_matched_events
