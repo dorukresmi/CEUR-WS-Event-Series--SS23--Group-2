@@ -3,7 +3,7 @@ from typing import Dict, Set
 from eventseries.src.main.completeSeries.check_annual_proceeding import (
     CheckAnnualProceeding,
 )
-from eventseries.src.main.query.queried_proceedings import EventsProceedings
+from eventseries.src.main.query.query_proceedings import WikidataEventsProceedings
 
 
 class SeriesCompletion:
@@ -33,7 +33,7 @@ class SeriesCompletion:
         return set_event_series
 
     def extract_proceedings_titles(self) -> Dict:
-        events = EventsProceedings()
+        events = WikidataEventsProceedings()
         events_dict = events.read_as_dict()
         # cache_manager = JsonCacheManager()
         # list_events = cache_manager.load_lod("volumes")

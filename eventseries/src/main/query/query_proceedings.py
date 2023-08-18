@@ -5,7 +5,7 @@ from lodstorage.query import Query
 from lodstorage.sparql import SPARQL
 
 
-class EventsProceedings(object):
+class WikidataEventsProceedings(object):
     def read_as_dict(self):
         query_record = {
             "lang": "sparql",
