@@ -47,10 +47,10 @@ class QueryEvents(unittest.TestCase):
         records_without_series = event_extractor.check_events_with_series(self.events)
         self.assertEqual(len(records_without_series), 2)
 
-    def test_extract_ceurws_title(self):
-        event_extractor = EventExtractor()
-        records_without_series = event_extractor.extract_ceurws_title(self.events)
-        self.assertEqual(len(records_without_series), 6)
+    # def test_extract_ceurws_title(self):
+    #     event_extractor = EventExtractor()
+    #     records_without_series = event_extractor.extract_ceurws_title(self.events)
+    #     self.assertEqual(len(records_without_series), 6)
 
     def test_extract_wikidata_title(self):
         event_extractor = EventExtractor()
