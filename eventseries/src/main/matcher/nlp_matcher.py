@@ -101,9 +101,8 @@ class NlpMatcher:
 
         # Convert the dictionary to a DataFrame
         df = pd.DataFrame(data_dict)
-        df.to_json(
-            "/Users/ayan/Projects/KGLab/main/CEUR-WS-Event-Series--SS23/eventseries/src/main/resources/all_matches.json"
-        )
+        df.to_json(os.path.join(resources_path, "all_matches.json"))
+
         return df
 
     def extract_series(self, wikidata_events_with_series):

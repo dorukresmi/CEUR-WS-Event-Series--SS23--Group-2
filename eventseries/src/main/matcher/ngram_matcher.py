@@ -4,6 +4,10 @@ import nltk
 import pandas as pd
 from nltk import ngrams
 from nltk.corpus import stopwords
+
+nltk.download("stopwords")
+nltk.download("punkt")
+from nltk import ngrams
 from nltk.metrics.distance import jaccard_distance
 
 
