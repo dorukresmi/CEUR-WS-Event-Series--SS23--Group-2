@@ -60,7 +60,7 @@ class PhraseMatch:
         # print("true positives: ", true_positives)
         # print("false positives: ", false_positives)
         # print("false negatives: ", false_negatives)
-        print("Statistics from DBLP: ")
+        print(f"\nStatistics from Phrase matching: ")
         precision = true_positives / (true_positives + false_positives)
         print("Precision: ", precision)
         recall = true_positives / (true_positives + false_negatives)

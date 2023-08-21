@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # importDataTemp.counter_func()
     # importDataTemp.check_event_with_series(importDataTemp.new_func(), importDataTemp.new_func_series())
 
-    # Query Event series
+    # Query event series
     event_series = WikidataEventSeries()
     event_series.event_series_query()
 

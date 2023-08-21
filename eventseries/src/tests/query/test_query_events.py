@@ -44,7 +44,7 @@ class QueryEvents(unittest.TestCase):
 
     def test_check_events_with_series(self):
         event_extractor = EventExtractor()
-        records_without_series = event_extractor.check_events_with_series(self.events)
+        records_without_series = event_extractor.get_events_without_series(self.events)
         self.assertEqual(len(records_without_series), 2)
 
     # def test_extract_ceurws_title(self):

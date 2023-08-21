@@ -19,7 +19,7 @@ class FullMatch:
         resources_path = os.path.abspath("resources")
 
         # Remove the events that already have a series assigned
-        records_without_series = self.event_extractor.check_events_with_series(records)
+        records_without_series = self.event_extractor.get_events_without_series(records)
         print(
             "Length of the records that do not have series assigned: ",
             len(records_without_series),
@@ -68,6 +68,10 @@ class FullMatch:
         matches_with_wikidata_labels = self.matcher.match(
             self.event_extractor.extract_wikidata_label(records_with_diff_labels), LABEL
         )
+        print(
+            "Matches from label of event in wikidata: ",
+            len(matches_with_wikidata_labels),
+        )
         records_remaining_with_no_matches = [
             record
             for record in records_remaining
@@ -90,25 +94,21 @@ class FullMatch:
             for event in records_remaining_with_no_matches
             if "dblpEventId" in event
         ]
+        print()
         print("Records without matches: ", len(records_remaining_with_no_matches))
         print("Records with dblpEventId: ", len(events_with_dblp_event_id))
 
         print(
-            "Matches from label of event in wikidata: ",
-            len(matches_with_wikidata_labels),
-        )
-
-        print(
-            "Total matches = ",
+            "Total full matches: ",
             len(matches_with_ceurws_titles)
             + len(matches_with_wikidata_titles)
             + len(matches_with_wikidata_labels),
         )
 
-        print(
-            len(
-                matches_with_ceurws_titles
-                and matches_with_wikidata_titles
-                and matches_with_wikidata_labels
-            )
-        )
+        # print(
+        #    len(
+        #        matches_with_ceurws_titles
+        #        and matches_with_wikidata_titles
+        #        and matches_with_wikidata_labels
+        #   )
+        # )

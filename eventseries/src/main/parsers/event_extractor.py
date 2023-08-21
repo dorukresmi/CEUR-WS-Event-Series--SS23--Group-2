@@ -12,7 +12,7 @@ class EventExtractor:
     def __init__(self) -> None:
         self.records_with_series = []
 
-    def check_events_with_series(self, records):
+    def get_events_without_series(self, records):
         records_without_series = []
         for record in records:
             """Events that are already part of the event series in wikidata"""
@@ -43,21 +43,23 @@ class EventExtractor:
                 record_url = "https://ceur-ws.org/Vol-" + volume_number
                 record[CEUR_SPT_URL] = utility.generate_ceur_spt_url(record_url)
             else:
-                print(record)
+                # print(record)
                 count_records_without_ceur_ws += 1
 
         print(
-            "Number of events in CEUR-WS proceedings without CEUR-WS URL = ",
+            "Number of wikidata events from CEUR-WS proceedings without CEUR-WS URL = ",
             count_records_without_ceur_ws,
         )
         print(
-            "Number of events in CEUR-WS proceedings with CEUR-WS URL = ", len(records)
+            "Number of wikidata events from CEUR-WS proceedings with CEUR-WS URL = ",
+            len(records),
         )
         records_with_titles = volume_parser.parse_ceur_ws_title(records)
         print(
             "Number of events with potential event series title = ",
             len(records_with_titles),
         )
+        print()
         return records_with_titles
 
     def extract_wikidata_title(self, records):

@@ -12,7 +12,7 @@ class SeriesCompletion:
         events_dict = self.extract_proceedings_titles()
         # Check annual proceeding
         """ Both JsonCacheManager(CEUR-WS proceedings) and CEUR-WS proceedings from wikidata give
-        the same number of results having annual keyword.(Seperatly matcher is not required to be called for the
+        the same number of results having annual keyword.(Separately matcher is not required to be called for the
         CEUR-WS proceedings)
         """
         event_series = list()
@@ -28,7 +28,7 @@ class SeriesCompletion:
             if "series" in event:
                 event_series.append(event["series"])
         set_event_series = set(event_series)
-        print(f"Found series in wikidata: ", len(set_event_series))
+        print(f"Unique series found in wikidata: ", len(set_event_series))
         print()
         return set_event_series
 

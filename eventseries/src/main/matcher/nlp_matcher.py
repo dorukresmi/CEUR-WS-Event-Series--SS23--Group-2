@@ -1,12 +1,12 @@
 import json
 import os
-import pickle
+from pathlib import Path
 from typing import List
 
 import pandas as pd
 
 from eventseries.src.main.dblp import matching
-from eventseries.src.main.dblp.event_classes import EventSeries
+from eventseries.src.main.dblp.parsing import load_event_series
 from eventseries.src.main.matcher.acronym_matcher import AcronymMatch
 from eventseries.src.main.matcher.match import Match
 from eventseries.src.main.matcher.ngram_matcher import NgramMatch
@@ -67,9 +67,12 @@ class NlpMatcher:
         )
         # path_to_wikidata_events = Path("") / ".." / "resources" / "EventsWithoutSeries.json"
 
-        # TODO: Take this impl from DBLP
+        resources_path = os.path.abspath("resources")
+        path = os.path.join(resources_path, "dblp_event_series.pickle")
+
         dblp_matches_df = matching.match_wikidata_conference_to_series_dblp_id(
-            pd.read_json(path_to_wikidata_events), self.load_event_series()
+            pd.read_json(path_to_wikidata_events),
+            load_event_series(Path(path)),
         )
         dblp_matches_dict = dblp_matches_df[[TITLE, SERIES]].reset_index().to_dict()
         for item in range(0, len(dblp_matches_df)):
@@ -101,16 +104,7 @@ class NlpMatcher:
         df.to_json(
             "/Users/ayan/Projects/KGLab/main/CEUR-WS-Event-Series--SS23/eventseries/src/main/resources/all_matches.json"
         )
-
         return df
-
-    # TODO: Take this method from DBLP
-    def load_event_series(self) -> List[EventSeries]:
-        resources_path = os.path.abspath("resources")
-        path = os.path.join(resources_path, "dblp_event_series.pickle")
-        with open(path, "rb") as file:
-            event_series: List[EventSeries] = pickle.load(file)
-            return event_series
 
     def extract_series(self, wikidata_events_with_series):
         matches = []
